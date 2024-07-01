@@ -1,0 +1,36 @@
+@font-face {
+   font-family: "PP Telegraf";
+   src: url("../../../public/fonts/PPTelegraf/PPTelegraf-Regular.otf")
+      format("opentype");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "PP Telegraf";
+   src: url("../../../public/fonts/PPTelegraf/PPTelegraf-UltraBold.otf")
+      format("opentype");
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "PP Telegraf";
+   src: url("../../../public/fonts/PPTelegraf/PPTelegraf-UltraLight.otf")
+      format("opentype");
+   font-weight: light;
+   font-style: normal;
+}
+
+* {
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "pp telegraf", sans-serif;
+   color: #252423;
+}
+
+section {
+   width: 100%;
+   height: 100vh;
+   background-color: #f8f1de;
+}

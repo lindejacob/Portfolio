@@ -1,0 +1,33 @@
+.headerDiv {
+   display: flex;
+   position: relative;
+   top: 20rem;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.headerDiv h1 {
+   font-weight: bold;
+   font-style: normal;
+   font-size: 4rem;
+   width: 30rem;
+   overflow-wrap: break-word;
+}
+
+.headerDiv .subheader {
+   display: flex;
+   flex-direction: row;
+}
+.subheader h2 {
+   display: inline-block;
+   margin-right: 10px;
+
+   font-weight: normal;
+   font-style: normal;
+   font-size: 3rem;
+}
+
+.subheader > .highlight {
+   color: #ff6331;
+}
