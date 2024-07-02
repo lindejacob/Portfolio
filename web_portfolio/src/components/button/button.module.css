@@ -1,0 +1,14 @@
+.filledButton {
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   border-radius: 2cap;
+}
+
+.circleButton {
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   border-radius: 50%;
+   background-position: center;
+   background-repeat: no-repeat;
+   aspect-ratio: 1/1;
+}

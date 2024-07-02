@@ -1,0 +1,11 @@
+.navbar {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: auto;
+   width: 14rem;
+
+   top: 2rem;
+   margin: 0 2rem auto auto;
+}

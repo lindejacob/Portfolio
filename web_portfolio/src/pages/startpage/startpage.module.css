@@ -18,7 +18,7 @@
    font-family: "PP Telegraf";
    src: url("../../../public/fonts/PPTelegraf/PPTelegraf-UltraLight.otf")
       format("opentype");
-   font-weight: light;
+   font-weight: lighter;
    font-style: normal;
 }
 
@@ -28,9 +28,77 @@
    font-family: "pp telegraf", sans-serif;
    color: #252423;
 }
-
-section {
+:root {
+   --rotation: 10deg;
+}
+.section {
    width: 100%;
    height: 100vh;
    background-color: #f8f1de;
+}
+
+.titleContainer {
+   position: relative;
+   top: 20%;
+}
+.scrollBtnContainer {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   position: absolute;
+   bottom: 15rem;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.scrollBtnContainer p {
+   font-size: 1.5rem;
+   font-weight: normal;
+}
+
+.card:nth-child(1) {
+   position: absolute;
+   top: 7rem;
+   left: 7rem;
+}
+
+.card:nth-child(2) {
+   position: absolute;
+   bottom: 5rem;
+   left: 22rem;
+}
+
+.card:nth-child(3) {
+   position: absolute;
+   top: 10rem;
+   right: 7rem;
+}
+
+.card:nth-child(4) {
+   position: absolute;
+   bottom: 8rem;
+   right: 22rem;
+}
+
+.card:nth-child(1):hover,
+.card:nth-child(2):hover {
+   transform: rotateZ(calc(var(--rotation) * -1));
+}
+.card:nth-child(3):hover,
+.card:nth-child(4):hover {
+   transform: rotateZ(var(--rotation));
+}
+
+.card {
+   transition: ease-in-out 0.2s;
+}
+
+.circle {
+   position: absolute;
+   height: 15rem;
+   aspect-ratio: 2/1;
+   bottom: -3rem;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 15rem 15rem 0 0;
+   background-color: #252423;
 }
