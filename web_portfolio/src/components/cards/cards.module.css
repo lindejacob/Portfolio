@@ -3,6 +3,7 @@
    display: flex;
    width: 12rem;
    cursor: pointer;
+   border-radius: 2cap;
 }
 
 .card > .background {

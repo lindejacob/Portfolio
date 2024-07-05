@@ -28,5 +28,5 @@
 }
 
 .subheader > .highlight {
-   color: #ff6331;
+   color: var(--highligt-color);
 }

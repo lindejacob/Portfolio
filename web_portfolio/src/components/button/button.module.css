@@ -12,3 +12,10 @@
    background-repeat: no-repeat;
    aspect-ratio: 1/1;
 }
+
+.outlinedButton {
+   background: none;
+   border-radius: 1cap;
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+}

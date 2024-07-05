@@ -3,6 +3,7 @@ import Card from "../../components/cards/cards.js";
 import Title from "../../components/title/title.js";
 import Navbar from "../../components/navbar/navbar.js";
 import { CircleButton } from "../../components/button/button.js";
+import { CircleZoom, DarkenScreen } from "../../components/motion/motion.js";
 
 //import img
 import fabledBackground from "../../img/fabledBackground.svg";
@@ -58,7 +59,10 @@ function Startpage() {
                size={"3rem"}
             />
          </div>
-         <div className={styles.circle} />
+         <div className={styles.circleContainer}>
+            <CircleZoom />
+         </div>
+         <DarkenScreen />
       </section>
    );
 }

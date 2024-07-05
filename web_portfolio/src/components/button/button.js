@@ -1,5 +1,6 @@
 import React from "react"; // Ensure React is imported
-import style from "./button.module.css";
+import styles from "./button.module.css";
+import { color } from "framer-motion";
 
 const FilledButton = ({ text, textColor, color, fontSize }) => {
    const dynStyle = {
@@ -9,7 +10,7 @@ const FilledButton = ({ text, textColor, color, fontSize }) => {
    };
 
    return (
-      <button style={dynStyle} className={style.filledButton}>
+      <button style={dynStyle} className={styles.filledButton}>
          {text}
       </button>
    );
@@ -23,7 +24,15 @@ const CircleButton = ({ imageSize, imageUrl, color, size }) => {
       backgroundImage: `url(${imageUrl})`,
    };
 
-   return <button style={dynStyle} className={style.circleButton}></button>;
+   return <button style={dynStyle} className={styles.circleButton}></button>;
 };
 
-export { FilledButton, CircleButton };
+const OutlineButton = ({ text, style }) => {
+   return (
+      <button style={style} className={styles.OutlineButton}>
+         {text}
+      </button>
+   );
+};
+
+export { FilledButton, CircleButton, OutlineButton };

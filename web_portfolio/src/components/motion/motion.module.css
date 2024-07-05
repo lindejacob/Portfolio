@@ -1,0 +1,35 @@
+.circle {
+   width: 100vw;
+   margin-bottom: -67%;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   background-color: var(--secondary-color);
+   clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 50%);
+   pointer-events: none;
+}
+
+.darkenScreen {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100vw;
+   height: 100vh;
+   background-color: #252423;
+   pointer-events: none;
+}
+
+@keyframes scrollText {
+   0% {
+      transform: translateX(100%);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
+}
+
+.scrollingText {
+   white-space: nowrap;
+   overflow: hidden;
+   animation: scrollText 10s linear infinite;
+}
