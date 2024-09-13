@@ -44,4 +44,10 @@
 .enterButton {
    border: 2px solid var(--highlight-color);
    color: var(--primary-color);
+   font-size: 2rem;
+}
+
+.enterBtnContainer {
+   width: 50%;
+   margin: auto;
 }

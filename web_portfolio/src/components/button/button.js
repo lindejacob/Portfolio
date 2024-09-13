@@ -27,9 +27,14 @@ const CircleButton = ({ imageSize, imageUrl, color, size }) => {
    return <button style={dynStyle} className={styles.circleButton}></button>;
 };
 
-const OutlineButton = ({ text, style }) => {
+const OutlineButton = ({ text, borderColor, color, fontSize }) => {
+   const dynStyle = {
+      borderColor: borderColor,
+      color: color,
+      fontSize: fontSize,
+   };
    return (
-      <button style={style} className={styles.OutlineButton}>
+      <button style={dynStyle} className={styles.outlineButton}>
          {text}
       </button>
    );

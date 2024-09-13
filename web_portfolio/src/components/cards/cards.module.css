@@ -1,7 +1,7 @@
 .card {
    position: relative;
    display: flex;
-   width: 12rem;
+   width: 8rem;
    cursor: pointer;
    border-radius: 2cap;
 }

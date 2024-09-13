@@ -4,11 +4,6 @@ import { OutlineButton } from "../../components/button/button.js";
 import fabledBackground from "../../img/fabledBackground.svg";
 
 function ProjectSelector() {
-   const enterButtonStyle = {
-      color: "var(--secondary-color)",
-      fontSize: "1.5rem",
-   };
-
    return (
       <section className={styles.section}>
          <div className={styles.header}>
@@ -18,6 +13,7 @@ function ProjectSelector() {
             <div className={styles.cardContainer}>
                <div className={styles.card}>
                   <Card
+                     size={1.5}
                      paperclipBool={false}
                      imageUrl={fabledBackground}
                      altText="Fabled background"
@@ -26,6 +22,7 @@ function ProjectSelector() {
                </div>
                <div className={styles.card}>
                   <Card
+                     size={1.5}
                      paperclipBool={false}
                      imageUrl={fabledBackground}
                      altText="Fabled background"
@@ -34,6 +31,7 @@ function ProjectSelector() {
                </div>
                <div className={styles.card}>
                   <Card
+                     size={1.5}
                      paperclipBool={false}
                      imageUrl={fabledBackground}
                      altText="Fabled background"
@@ -41,7 +39,14 @@ function ProjectSelector() {
                   />
                </div>
             </div>
-            <OutlineButton text="Enter" style={enterButtonStyle} />
+            <div className={styles.enterBtnContainer}>
+               <OutlineButton
+                  text="Enter"
+                  borderColor={"var(--highligt-color)"}
+                  color={"var(--primary-color)"}
+                  fontSize={"2rem"}
+               />
+            </div>
          </div>
       </section>
    );

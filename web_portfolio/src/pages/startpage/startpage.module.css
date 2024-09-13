@@ -16,7 +16,7 @@
    align-items: center;
    flex-direction: column;
    position: absolute;
-   bottom: 15rem;
+   bottom: 8rem;
    left: 50%;
    transform: translateX(-50%);
 }
@@ -27,14 +27,14 @@
 
 .card:nth-child(1) {
    position: absolute;
-   top: 7rem;
-   left: 7rem;
+   top: 5rem;
+   left: 5rem;
 }
 
 .card:nth-child(2) {
    position: absolute;
-   bottom: 5rem;
-   left: 22rem;
+   bottom: 0rem;
+   left: 13rem;
 }
 
 .card:nth-child(3) {
@@ -45,8 +45,8 @@
 
 .card:nth-child(4) {
    position: absolute;
-   bottom: 8rem;
-   right: 22rem;
+   bottom: 1rem;
+   right: 10rem;
 }
 
 .card:nth-child(1):hover,
