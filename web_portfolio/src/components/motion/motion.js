@@ -5,7 +5,7 @@ function CircleZoom() {
    const { scrollYProgress } = useScroll();
    const minScale = 0.2;
 
-   const scale = useTransform(scrollYProgress, [0.0, 0.3], [minScale, 1]);
+   const scale = useTransform(scrollYProgress, [0.0, 0.18], [minScale, 1]);
 
    return (
       <motion.div
@@ -19,8 +19,7 @@ function CircleZoom() {
 
 function DarkenScreen() {
    const { scrollYProgress } = useScroll();
-
-   const opacity = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
+   const opacity = useTransform(scrollYProgress, [0.05, 0.18], [0, 1]);
 
    return (
       <motion.div
@@ -32,12 +31,4 @@ function DarkenScreen() {
    );
 }
 
-function ScrollingText({ text, style }) {
-   return (
-      <div className={styles.scrollingText} style={style}>
-         {text}
-      </div>
-   );
-}
-
-export { CircleZoom, DarkenScreen, ScrollingText };
+export { CircleZoom, DarkenScreen };

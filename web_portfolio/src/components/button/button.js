@@ -1,6 +1,5 @@
-import React from "react"; // Ensure React is imported
+import React from "react";
 import styles from "./button.module.css";
-import { color } from "framer-motion";
 
 const FilledButton = ({ text, textColor, color, fontSize }) => {
    const dynStyle = {

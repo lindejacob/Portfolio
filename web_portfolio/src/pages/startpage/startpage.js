@@ -50,6 +50,7 @@ function Startpage() {
                />
             </div>
          </div>
+
          <div className={styles.scrollBtnContainer}>
             <p>Scroll</p>
             <CircleButton
