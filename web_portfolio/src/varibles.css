@@ -33,3 +33,24 @@
    --secondary-color: #252423;
    --highligt-color: #ff6331;
 }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+   * {
+      font-size: 12px;
+   }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+   * {
+      font-size: 14px;
+   }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+   * {
+      font-size: 16px;
+   }
+}
