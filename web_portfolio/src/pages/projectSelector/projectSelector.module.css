@@ -14,6 +14,7 @@
 .header {
    display: flex;
    justify-content: center;
+   margin-bottom: 10rem;
 }
 
 .header h2 {
@@ -75,13 +76,13 @@
 
 .rightArrow {
    position: relative;
-   left: 12%;
+   left: 20%;
    transform: translateY(100%);
-   margin-top: 4rem;
+   margin-top: 0rem;
 }
 
 .leftArrow {
    position: relative;
-   right: 12%;
+   right: 20%;
    transform: rotatey(180deg);
 }

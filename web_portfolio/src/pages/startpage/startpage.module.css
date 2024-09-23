@@ -27,8 +27,9 @@ body {
    transform: translateX(-50%);
 }
 .scrollBtnContainer p {
-   font-size: 1.5rem;
+   font-size: 2rem;
    font-weight: normal;
+   margin-bottom: 1rem;
 }
 
 .card {
