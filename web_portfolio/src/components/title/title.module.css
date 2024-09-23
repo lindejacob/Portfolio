@@ -4,14 +4,16 @@
    flex-direction: column;
    align-items: center;
    text-align: center;
+   width: 60%;
 }
 
 .headerDiv h1 {
    font-weight: bold;
    font-style: normal;
-   font-size: 7rem;
+   font-size: 7vw;
    width: 50rem;
    overflow-wrap: break-word;
+   margin: 2%;
 }
 
 .headerDiv .subheader {
@@ -24,7 +26,7 @@
 
    font-weight: normal;
    font-style: normal;
-   font-size: 4rem;
+   font-size: 3vw;
 }
 
 .subheader > .highlight {
