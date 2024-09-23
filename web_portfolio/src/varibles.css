@@ -34,6 +34,10 @@
    --highligt-color: #ff6331;
 }
 
+* {
+   font-size: 10px; /* Example default font size */
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
    * {
@@ -44,12 +48,12 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
    * {
-      font-size: 14px;
+      font-size: 12px;
    }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1300px) {
    * {
       font-size: 16px;
    }
