@@ -9,7 +9,7 @@
 .headerDiv h1 {
    font-weight: bold;
    font-style: normal;
-   font-size: 7em;
+   font-size: 7rem;
    width: 50rem;
    overflow-wrap: break-word;
    margin: 0rem;
@@ -21,11 +21,11 @@
 }
 .subheader h2 {
    display: inline-block;
-   margin-right: 0.3em;
+   margin-right: 0.3rem;
 
    font-weight: normal;
    font-style: normal;
-   font-size: 4em;
+   font-size: 4rem;
 }
 
 .subheader > .highlight {
