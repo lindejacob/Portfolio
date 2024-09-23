@@ -4,10 +4,6 @@
    background-color: var(--secondary-color);
 }
 
-body {
-   font-size: 16px;
-}
-
 .projectSelector {
    display: flex;
    flex-direction: column;

@@ -30,6 +30,10 @@ body {
    font-weight: normal;
 }
 
+.card {
+   transition: ease-in-out 0.2s;
+}
+
 .card:nth-child(1) {
    position: absolute;
    top: 5rem;
@@ -63,14 +67,12 @@ body {
    transform: rotateZ(var(--rotation));
 }
 
-.card {
-   transition: ease-in-out 0.2s;
-}
-
 .circleContainer {
-   position: relative;
-   bottom: 23rem;
-   left: 50%;
-   transform: translateX(-50%);
+   position: absolute;
+   justify-content: center;
+   display: flex;
+   height: 100vh;
+   width: 100vw;
+   top: 50%;
    pointer-events: none;
 }

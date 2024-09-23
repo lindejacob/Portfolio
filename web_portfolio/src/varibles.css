@@ -23,8 +23,6 @@
 }
 
 * {
-   margin: 0;
-   box-sizing: border-box;
    font-family: "pp telegraf", sans-serif;
    font-weight: normal;
    color: #252423;
