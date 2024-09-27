@@ -1,4 +1,5 @@
 import styles from "./motion.module.css";
+import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function CircleZoom() {

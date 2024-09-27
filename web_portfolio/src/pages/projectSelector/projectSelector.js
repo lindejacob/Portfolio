@@ -1,8 +1,7 @@
 import styles from "./projectSelector.module.css";
 import Card from "../../components/cards/cards.js";
-import { CircleButton, OutlineButton } from "../../components/button/button.js";
+import { OutlineButton } from "../../components/button/button.js";
 import fabledBackground from "../../img/fabledBackground.svg";
-import arrow from "../../img/arrow.svg";
 
 function ProjectSelector() {
    return (
@@ -37,20 +36,6 @@ function ProjectSelector() {
                      imageUrl={fabledBackground}
                      altText="Fabled background"
                      header=""
-                  />
-               </div>
-               <div className={styles.rightArrow}>
-                  <CircleButton
-                     color={"transparent"}
-                     imageSize={"100%"}
-                     imageUrl={arrow}
-                  />
-               </div>
-               <div className={styles.leftArrow}>
-                  <CircleButton
-                     color={"transparent"}
-                     imageSize={"100%"}
-                     imageUrl={arrow}
                   />
                </div>
             </div>
