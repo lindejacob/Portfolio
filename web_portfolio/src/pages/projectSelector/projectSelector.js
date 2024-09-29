@@ -13,7 +13,7 @@ function ProjectSelector() {
             <div className={styles.cardContainer}>
                <div className={styles.card}>
                   <Card
-                     size={1.5}
+                     size={1.6}
                      paperclipBool={false}
                      imageUrl={fabledBackground}
                      altText="Fabled background"
@@ -22,7 +22,7 @@ function ProjectSelector() {
                </div>
                <div className={styles.card}>
                   <Card
-                     size={1.5}
+                     size={1.7}
                      paperclipBool={false}
                      imageUrl={fabledBackground}
                      altText="Fabled background"
@@ -31,7 +31,7 @@ function ProjectSelector() {
                </div>
                <div className={styles.card}>
                   <Card
-                     size={1.5}
+                     size={1.6}
                      paperclipBool={false}
                      imageUrl={fabledBackground}
                      altText="Fabled background"

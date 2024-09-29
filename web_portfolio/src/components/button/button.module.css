@@ -1,4 +1,5 @@
 .filledButton {
+   height: 3rem;
    padding: 0.5rem 1rem;
    cursor: pointer;
    border-radius: 2cap;
@@ -6,6 +7,7 @@
 }
 
 .circleButton {
+   height: 3rem;
    padding: 0.5rem 1rem;
    cursor: pointer;
    border-radius: 50%;
