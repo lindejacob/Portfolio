@@ -2,6 +2,30 @@ import styles from "./projectSelector.module.css";
 import Card from "../../components/cards/cards.js";
 import { OutlineButton } from "../../components/button/button.js";
 import fabledBackground from "../../img/fabledBackground.svg";
+import CardSlider from "../../components/motion/cardSlider.js";
+
+const cards = [
+   {
+      size: "1.5",
+      imageUrl: fabledBackground,
+   },
+   {
+      size: "1.5",
+      imageUrl: fabledBackground,
+   },
+   {
+      size: "1.5",
+      imageUrl: fabledBackground,
+   },
+   {
+      size: "1.5",
+      imageUrl: fabledBackground,
+   },
+   {
+      size: "1.5",
+      imageUrl: fabledBackground,
+   },
+];
 
 function ProjectSelector() {
    return (
@@ -10,46 +34,18 @@ function ProjectSelector() {
             <h2>Projects of interest</h2>
          </div>
          <div className={styles.projectSelector}>
-            <div className={styles.cardContainer}>
-               <div className={styles.card}>
-                  <Card
-                     size={1.6}
-                     paperclipBool={false}
-                     imageUrl={fabledBackground}
-                     altText="Fabled background"
-                     header=""
-                  />
-               </div>
-               <div className={styles.card}>
-                  <Card
-                     size={1.7}
-                     paperclipBool={false}
-                     imageUrl={fabledBackground}
-                     altText="Fabled background"
-                     header=""
-                  />
-               </div>
-               <div className={styles.card}>
-                  <Card
-                     size={1.6}
-                     paperclipBool={false}
-                     imageUrl={fabledBackground}
-                     altText="Fabled background"
-                     header=""
-                  />
-               </div>
-            </div>
-            <div className={styles.enterBtnContainer}>
-               <OutlineButton
-                  text="Enter"
-                  borderColor={"var(--highligt-color)"}
-                  color={"var(--primary-color)"}
-                  fontSize={"2rem"}
-               />
-            </div>
+            <CardSlider cards={cards} />
          </div>
       </section>
    );
 }
 
 export default ProjectSelector;
+
+//  <Card
+//     size={1.6}
+//     paperclipBool={false}
+//     imageUrl={fabledBackground}
+//     altText="Fabled background"
+//     header=""
+//  />;
