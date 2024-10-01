@@ -15,7 +15,7 @@ const FilledButton = ({ text, textColor, color, fontSize }) => {
    );
 };
 
-const CircleButton = ({ imageSize, imageUrl, color, size }) => {
+const CircleButton = ({ imageSize, imageUrl, color, size, onClick }) => {
    const dynStyle = {
       backgroundColor: color,
       backgroundSize: imageSize,
@@ -23,7 +23,13 @@ const CircleButton = ({ imageSize, imageUrl, color, size }) => {
       backgroundImage: `url(${imageUrl})`,
    };
 
-   return <button style={dynStyle} className={styles.circleButton}></button>;
+   return (
+      <button
+         style={dynStyle}
+         className={styles.circleButton}
+         onClick={onClick}
+      ></button>
+   );
 };
 
 const OutlineButton = ({ text, borderColor, color, fontSize }) => {

@@ -7,3 +7,15 @@
    width: 100vw;
    justify-content: center;
 }
+
+.leftArrow {
+   position: absolute;
+   left: 20%;
+
+   transform: rotateY(180deg);
+}
+
+.rightArrow {
+   position: absolute;
+   right: 20%;
+}
