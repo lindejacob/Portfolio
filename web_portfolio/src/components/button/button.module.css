@@ -4,6 +4,11 @@
    cursor: pointer;
    border-radius: 2cap;
    border: none;
+   transition: 0.3s;
+}
+
+.filledButton:hover {
+   transform: scale(1.1);
 }
 
 .circleButton {
@@ -15,6 +20,11 @@
    background-repeat: no-repeat;
    aspect-ratio: 1/1;
    border: none;
+   transition: 0.3s;
+}
+
+.circleButton:hover {
+   transform: scale(1.2);
 }
 
 .outlineButton {
@@ -24,7 +34,4 @@
    cursor: pointer;
    font-weight: normal;
    border: 0.1em solid;
-}
-
-.outlineButton:hover {
 }

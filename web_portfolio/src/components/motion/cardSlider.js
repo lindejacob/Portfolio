@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { delay, motion, transform } from "framer-motion";
 import styles from "./cardSlider.module.css";
 import Card from "../../components/cards/cards.js";
 import { CircleButton } from "../button/button.js";
@@ -29,11 +29,56 @@ const CardSlider = ({ cards }) => {
    const positions = ["center", "left1", "left", "right", "right1"];
 
    const cardVariants = {
-      center: { x: "0%", scale: 1, zIndex: 5 },
-      left1: { x: "-80%", scale: 0.7, zIndex: 3 },
-      left: { x: "0", scale: 0.5, zIndex: 2 },
-      right: { x: "0%", scale: 0.5, zIndex: 1 },
-      right1: { x: "80%", scale: 0.7, zIndex: 3 },
+      center: {
+         x: "0%",
+         scale: 1,
+         zIndex: 5,
+         filter:
+            "drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.3)) drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.5))",
+         transition: {
+            delay: 0.1,
+         },
+      },
+      left1: {
+         x: "-60%",
+         y: "1%",
+         rotate: "-20deg",
+         scale: 0.8,
+         zIndex: 4,
+         pointerEvents: "none",
+         filter: "none",
+         transition: {
+            delay: 0.1,
+         },
+      },
+      left: {
+         x: "-20%",
+         scale: 0,
+         zIndex: 0,
+         pointerEvents: "none",
+         filter: "none",
+         opacity: 0,
+      },
+      right: {
+         x: "20%",
+         scale: 0,
+         zIndex: 0,
+         pointerEvents: "none",
+         filter: "none",
+         opacity: 0,
+      },
+      right1: {
+         x: "60%",
+         y: "1%",
+         rotate: "20deg",
+         scale: 0.8,
+         zIndex: 4,
+         pointerEvents: "none",
+         filter: "none",
+         transition: {
+            delay: 0.1,
+         },
+      },
    };
 
    return (

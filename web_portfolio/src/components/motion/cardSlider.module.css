@@ -10,12 +10,13 @@
 
 .leftArrow {
    position: absolute;
-   left: 20%;
-
+   left: 30%;
+   margin-top: 5rem;
    transform: rotateY(180deg);
 }
 
 .rightArrow {
    position: absolute;
-   right: 20%;
+   right: 30%;
+   margin-top: 5rem;
 }

@@ -25,6 +25,7 @@ body {
    left: 50%;
    bottom: 15%;
    transform: translateX(-50%);
+   pointer-events: none;
 }
 .scrollBtnContainer p {
    font-size: 2rem;

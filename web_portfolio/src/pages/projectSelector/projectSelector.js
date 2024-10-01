@@ -30,11 +30,13 @@ const cards = [
 function ProjectSelector() {
    return (
       <section className={styles.section}>
-         <div className={styles.header}>
-            <h2>Projects of interest</h2>
-         </div>
-         <div className={styles.projectSelector}>
-            <CardSlider cards={cards} />
+         <div>
+            <div className={styles.header}>
+               <h2>Projects of interest</h2>
+            </div>
+            <div className={styles.projectSelector}>
+               <CardSlider cards={cards} />
+            </div>
          </div>
       </section>
    );

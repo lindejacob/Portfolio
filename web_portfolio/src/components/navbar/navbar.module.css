@@ -1,11 +1,28 @@
-/* .menuPopUp {
+.menuPopUp {
+   position: fixed;
    margin: 0;
    position: fixed;
    height: 100vh;
    width: 100vw;
-   backdrop-filter: blur(500px);
-} */
+   backdrop-filter: blur(5px);
+   z-index: 10;
+   transition: 0.2s;
+}
 
+.menuPopUp.show {
+   opacity: 100%;
+   pointer-events: all;
+}
+
+.menuPopUp.hide {
+   opacity: 0%;
+   pointer-events: none;
+}
+
+.menuPopUpDisabled {
+   opacity: 0;
+   pointer-events: none;
+}
 .navbar {
    position: relative;
    display: flex;
