@@ -1,18 +1,16 @@
 import styles from "./startpage.module.css";
-import Card from "../../components/cards/cards.js";
-import Title from "../../components/title/title.js";
-import Navbar from "../../components/navbar/navbar.js";
-import { CircleButton } from "../../components/button/button.js";
-import { CircleZoom, DarkenScreen } from "../../components/motion/motion.js";
+import Card from "../../../components/cards/cards.js";
+import Title from "../../../components/title/title.js";
+import { CircleButton } from "../../../components/button/button.js";
+import { CircleZoom, DarkenScreen } from "../../../components/motion/motion.js";
 
 //import img
-import fabledBackground from "../../img/fabledBackground.svg";
-import arrowDown from "../../img/arrowDown.svg";
+import fabledBackground from "../../../img/fabledBackground.svg";
+import arrowDown from "../../../img/arrowDown.svg";
 
 function Startpage() {
    return (
       <section className={styles.section}>
-         <Navbar />
          <div className={styles.titleContainer}>
             <Title />
          </div>
@@ -23,6 +21,7 @@ function Startpage() {
                   imageUrl={fabledBackground}
                   altText="Fabled background"
                   header=""
+                  url={"./fabled"}
                />
             </div>
             <div className={styles.card}>
@@ -31,6 +30,7 @@ function Startpage() {
                   imageUrl={fabledBackground}
                   altText="Fabled background"
                   header=""
+                  url={"./fabled"}
                />
             </div>
             <div className={styles.card}>
@@ -39,6 +39,7 @@ function Startpage() {
                   imageUrl={fabledBackground}
                   altText="Fabled background"
                   header=""
+                  url={"./fabled"}
                />
             </div>
             <div className={styles.card}>
@@ -47,6 +48,7 @@ function Startpage() {
                   imageUrl={fabledBackground}
                   altText="Fabled background"
                   header=""
+                  url={"./fabled"}
                />
             </div>
          </div>

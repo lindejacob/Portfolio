@@ -1,13 +1,16 @@
-import Startpage from "./pages/startpage/startpage.js";
-import ProjectSelector from "./pages/projectSelector/projectSelector.js"; // Capitalize the component name
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import varibles from "./varibles.css";
+import HomePage from "./pages/home/home.js";
+import Fabled from "./pages/projects/fabled/fabled.js";
 
 function App() {
    return (
-      <main>
-         <Startpage />
-         <ProjectSelector />
-      </main>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/fabled" element={<Fabled />} />
+         </Routes>
+      </BrowserRouter>
    );
 }
 

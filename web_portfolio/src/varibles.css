@@ -2,7 +2,7 @@
    font-family: "PP Telegraf";
    src: url("../public/fonts/PPTelegraf/PPTelegraf-Regular.otf")
       format("opentype");
-   font-weight: normal;
+   font-weight: 400;
    font-style: normal;
 }
 
@@ -10,7 +10,7 @@
    font-family: "PP Telegraf";
    src: url("../public/fonts/PPTelegraf/PPTelegraf-UltraBold.otf")
       format("opentype");
-   font-weight: bold;
+   font-weight: 800;
    font-style: normal;
 }
 
@@ -18,14 +18,15 @@
    font-family: "PP Telegraf";
    src: url("../public/fonts/PPTelegraf/PPTelegraf-UltraLight.otf")
       format("opentype");
-   font-weight: lighter;
+   font-weight: 200;
    font-style: normal;
 }
 
 * {
-   font-family: "pp telegraf", sans-serif;
-   font-weight: normal;
+   font-family: "PP Telegraf", sans-serif;
+   font-weight: 400;
    color: #252423;
+   font-size: 10px;
 }
 
 :root {
@@ -34,10 +35,9 @@
    --highligt-color: #ff6331;
 }
 
-* {
-   font-size: 10px; /* Example default font size */
+h2 {
+   font-size: 5rem;
 }
-
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
    * {

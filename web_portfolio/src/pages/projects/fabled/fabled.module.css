@@ -1,0 +1,28 @@
+.fabled {
+   padding-top: 3rem;
+   padding-left: 6rem;
+   height: 100vh;
+   background-color: var(--secondary-color);
+
+   * {
+      color: var(--primary-color);
+   }
+}
+
+.header {
+   font-weight: bold;
+   font-weight: normal;
+   margin-bottom: 0;
+}
+
+.year,
+.with {
+   opacity: 80%;
+}
+
+.contentContainer {
+   display: grid;
+   p {
+      width: 50%;
+   }
+}

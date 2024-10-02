@@ -1,6 +1,6 @@
 .section {
    width: 100%;
-   height: 500vh;
+   height: 100vh;
    background-color: var(--secondary-color);
 }
 
@@ -12,9 +12,8 @@
 
 .header h2 {
    color: var(--primary-color);
-   font-size: 5rem;
    font-weight: bold;
-   margin-top: 13rem;
+   margin-top: 12rem;
    margin-bottom: 10rem;
 }
 

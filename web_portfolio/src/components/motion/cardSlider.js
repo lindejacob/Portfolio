@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { delay, motion, transform } from "framer-motion";
 import styles from "./cardSlider.module.css";
 import Card from "../../components/cards/cards.js";
@@ -7,8 +7,13 @@ import arrow from "../../img/arrow.svg";
 
 const CardSlider = ({ cards }) => {
    const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
+   const lastClickTimeRef = useRef(0);
 
    const handleNext = () => {
+      const now = Date.now();
+      if (now - lastClickTimeRef.current < 250) return;
+      lastClickTimeRef.current = now;
+
       setPositionIndexes(prevIndexes => {
          const updatedIndexes = prevIndexes.map(
             prevIndex => (prevIndex + 1) % 5
@@ -18,6 +23,10 @@ const CardSlider = ({ cards }) => {
    };
 
    const handleBack = () => {
+      const now = Date.now();
+      if (now - lastClickTimeRef.current < 250) return;
+      lastClickTimeRef.current = now;
+
       setPositionIndexes(prevIndexes => {
          const updatedIndexes = prevIndexes.map(
             prevIndex => (prevIndex + 4) % 5

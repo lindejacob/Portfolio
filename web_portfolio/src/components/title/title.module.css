@@ -22,9 +22,7 @@
 .subheader h2 {
    display: inline-block;
    margin-right: 0.3rem;
-
-   font-weight: normal;
-   font-style: normal;
+   font-weight: 200;
    font-size: 3em;
 }
 
