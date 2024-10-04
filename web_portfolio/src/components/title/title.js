@@ -7,9 +7,9 @@ function Title() {
             <h1>Jacob Mølholt Poulsen</h1>
          </div>
          <div className={styles.subheader}>
-            <h2>Innovative</h2>
-            <h2 className={styles.highlight}>Code,</h2>
-            <h2>Lasting Impact</h2>
+            <h2>Studying</h2>
+            <h2 className={styles.highlight}>software</h2>
+            <h2>engineering</h2>
          </div>
       </div>
    );

@@ -107,7 +107,7 @@ const CardSlider = ({ cards }) => {
          <div className="flex flex-row gap-3">
             <div className={styles.rightArrow}>
                <CircleButton
-                  color={"transparent"}
+                  backgroundColor={"transparent"}
                   imageSize={"100%"}
                   imageUrl={arrow}
                   onClick={handleBack}
@@ -115,7 +115,7 @@ const CardSlider = ({ cards }) => {
             </div>
             <div className={styles.leftArrow}>
                <CircleButton
-                  color={"transparent"}
+                  backgroundColor={"transparent"}
                   imageSize={"100%"}
                   imageUrl={arrow}
                   onClick={handleNext}

@@ -1,48 +1,48 @@
 import React from "react";
 import styles from "./button.module.css";
 
-const FilledButton = ({ text, textColor, color, fontSize }) => {
-   const dynStyle = {
-      color: textColor,
-      backgroundColor: color,
-      fontSize: fontSize,
-   };
-
+const FilledButton = ({
+   children: text,
+   color,
+   backgroundColor,
+   fontSize,
+   borderColor,
+   onClick,
+}) => {
    return (
-      <button style={dynStyle} className={styles.filledButton}>
+      <button
+         style={{
+            color: color,
+            backgroundColor: backgroundColor,
+            fontSize: fontSize,
+            borderColor: borderColor,
+         }}
+         className={styles.filledButton}
+         onClick={onClick}
+      >
          {text}
       </button>
    );
 };
 
-const CircleButton = ({ imageSize, imageUrl, color, size, onClick }) => {
-   const dynStyle = {
-      backgroundColor: color,
-      backgroundSize: imageSize,
-      width: size,
-      backgroundImage: `url(${imageUrl})`,
-   };
-
+const CircleButton = ({
+   imageSize,
+   imageUrl,
+   backgroundColor,
+   size,
+   onClick,
+}) => {
    return (
       <button
-         style={dynStyle}
+         style={{
+            backgroundColor: backgroundColor,
+            backgroundSize: imageSize,
+            width: size,
+            backgroundImage: `url(${imageUrl})`,
+         }}
          className={styles.circleButton}
          onClick={onClick}
       ></button>
    );
 };
-
-const OutlineButton = ({ text, borderColor, color, fontSize }) => {
-   const dynStyle = {
-      borderColor: borderColor,
-      color: color,
-      fontSize: fontSize,
-   };
-   return (
-      <button style={dynStyle} className={styles.outlineButton}>
-         {text}
-      </button>
-   );
-};
-
-export { FilledButton, CircleButton, OutlineButton };
+export { FilledButton, CircleButton };

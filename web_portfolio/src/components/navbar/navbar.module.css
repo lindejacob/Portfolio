@@ -26,11 +26,27 @@
 .navbar {
    position: fixed;
    display: flex;
-   justify-content: space-between;
+   opacity: 100%;
    align-items: center;
+   justify-content: space-between;
    height: auto;
-   width: 14rem;
-   top: 2rem;
-   right: 2rem;
+   width: 97.5vw;
+   padding: 0.8rem 2rem;
+   left: 50%;
+   transform: translateX(-50%);
    z-index: 9;
+}
+
+.navbar > .buttons {
+   display: flex;
+   align-items: center;
+   margin-left: 1rem;
+   justify-content: space-between;
+   width: 13%;
+}
+
+.navbar > .social {
+   display: flex;
+   justify-content: space-between;
+   width: 7%;
 }

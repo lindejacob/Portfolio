@@ -7,17 +7,28 @@
 .header {
    display: flex;
    justify-content: center;
+   align-items: center; /* Align items vertically in the center */
    margin-bottom: 10rem;
+   position: relative;
+   transform: translateX(-4.5%);
 }
 
 .header h2 {
    color: var(--primary-color);
    font-weight: bold;
-   margin-top: 12rem;
-   margin-bottom: 10rem;
+   margin: 0; /* Remove top and bottom margins */
+   z-index: 2;
+}
+
+.header > .arrow {
+   position: relative;
+   z-index: 1;
+   transform: rotate(10deg);
+   top: 5rem;
 }
 
 .projectSelector {
+   position: relative;
    display: flex;
    flex-direction: column;
    justify-content: center;
