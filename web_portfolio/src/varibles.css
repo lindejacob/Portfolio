@@ -22,6 +22,11 @@
    font-style: normal;
 }
 
+@font-face {
+   font-family: "PermanentMarker";
+   src: url("../public/fonts/PermanenMarker/PermanentMarker-Regular.ttf");
+}
+
 * {
    font-family: "PP Telegraf", sans-serif;
    font-weight: 400;
@@ -32,7 +37,7 @@
 :root {
    --primary-color: #f8f1de;
    --secondary-color: #252423;
-   --highligt-color: #ff6331;
+   --highlight-color: #ff6331;
 }
 
 h1 {

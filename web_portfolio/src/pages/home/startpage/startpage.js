@@ -14,45 +14,6 @@ function Startpage() {
          <div className={styles.titleContainer}>
             <Title />
          </div>
-         {/* <div>
-            <div className={styles.card}>
-               <Card
-                  paperclipBool={true}
-                  imageUrl={fabledBackground}
-                  altText="Fabled background"
-                  header=""
-                  url={"./fabled"}
-               />
-            </div>
-            <div className={styles.card}>
-               <Card
-                  paperclipBool={true}
-                  imageUrl={fabledBackground}
-                  altText="Fabled background"
-                  header=""
-                  url={"./fabled"}
-               />
-            </div>
-            <div className={styles.card}>
-               <Card
-                  paperclipBool={true}
-                  imageUrl={fabledBackground}
-                  altText="Fabled background"
-                  header=""
-                  url={"./fabled"}
-               />
-            </div>
-            <div className={styles.card}>
-               <Card
-                  paperclipBool={true}
-                  imageUrl={fabledBackground}
-                  altText="Fabled background"
-                  header=""
-                  url={"./fabled"}
-               />
-            </div>
-         </div> */}
-
          <div className={styles.scrollBtnContainer}>
             <p>Scroll</p>
             <CircleButton

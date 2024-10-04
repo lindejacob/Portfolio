@@ -49,6 +49,7 @@ function ProjectSelector() {
                         fill="#FF6331"
                      />
                   </svg>
+                  <p>Click to see project</p>
                </div>
                <h2>Projects of interest</h2>
             </div>

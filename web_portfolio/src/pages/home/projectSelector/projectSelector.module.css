@@ -24,7 +24,16 @@
    position: relative;
    z-index: 1;
    transform: rotate(10deg);
-   top: 5rem;
+   top: 7rem;
+}
+
+.header > .arrow > p {
+   position: relative;
+   bottom: 1rem;
+   left: 5rem;
+   font-family: "PermanentMarker";
+   color: var(--highlight-color);
+   transform: rotate(-30deg);
 }
 
 .projectSelector {
