@@ -1,18 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import style from "./navbar.module.css";
-import { FilledButton, CircleButton } from "../button/button.js";
+import { FilledButton, CircleButton, MenuButton } from "../button/button.js";
 
 // Import img
 import menubars from "../../img/menubars.svg";
 import imgGithub from "../../img/githubLogo.png";
 import imgLinkedin from "../../img/linkedinLogo.png";
 
-const MenuPopUp = ({ isShown, onClick }) => {
+const MenuPopUp = ({ isShown, onClose }) => {
+   const menuRef = useRef(null);
+
+   useEffect(() => {
+      const handleClickOutside = event => {
+         if (menuRef.current && !menuRef.current.contains(event.target)) {
+            onClose();
+         }
+      };
+
+      if (isShown) {
+         document.addEventListener("mousedown", handleClickOutside);
+      } else {
+         document.removeEventListener("mousedown", handleClickOutside);
+      }
+
+      return () => {
+         document.removeEventListener("mousedown", handleClickOutside);
+      };
+   }, [isShown, onClose]);
+
    return (
       <div
          className={`${style.menuPopUp} ${isShown ? style.show : style.hide}`}
-         onClick={onClick}
       >
+         <div className={style.menu} ref={menuRef}>
+            <div className={style.menuLeft}></div>
+            <div className={style.menuRight}>
+               <div>
+                  <MenuButton fontSize={"2rem"} onClick={onClose}>
+                     Hello
+                  </MenuButton>
+                  <MenuButton fontSize={"2rem"} onClick={onClose}>
+                     Hello
+                  </MenuButton>
+                  <MenuButton fontSize={"2rem"} onClick={onClose}>
+                     Hello
+                  </MenuButton>
+                  <MenuButton fontSize={"2rem"} onClick={onClose}>
+                     Hello
+                  </MenuButton>
+               </div>
+            </div>
+         </div>
          <div className={style.background}></div>
       </div>
    );
@@ -23,6 +61,10 @@ const Navbar = () => {
 
    const toggleMenu = () => {
       setIsMenuShown(!isMenuShown);
+   };
+
+   const closeMenu = () => {
+      setIsMenuShown(false);
    };
 
    const socialLink = name => {
@@ -40,23 +82,34 @@ const Navbar = () => {
             break;
       }
    };
+
    return (
       <div>
-         <MenuPopUp isShown={isMenuShown} onClick={toggleMenu} />{" "}
+         <MenuPopUp isShown={isMenuShown} onClose={closeMenu} />
          <div className={style.navbar}>
             <div className={style.social}>
-               <CircleButton
-                  imageUrl={imgGithub}
-                  backgroundColor={"white"}
-                  imageSize={"80%"}
-                  onClick={() => socialLink("github")}
-               />
-               <CircleButton
-                  imageUrl={imgLinkedin}
-                  backgroundColor={"white"}
-                  imageSize={"100%"}
-                  onClick={() => socialLink("linkedin")}
-               />
+               <div>
+                  <div>
+                     <CircleButton
+                        imageUrl={imgGithub}
+                        backgroundColor={"white"}
+                        imageSize={"80%"}
+                        onClick={() => socialLink("github")}
+                     />
+                  </div>
+                  <p>Github</p>
+               </div>
+               <div>
+                  <div>
+                     <CircleButton
+                        imageUrl={imgLinkedin}
+                        backgroundColor={"white"}
+                        imageSize={"100%"}
+                        onClick={() => socialLink("linkedin")}
+                     />
+                  </div>
+                  <p>linkedin</p>
+               </div>
             </div>
             <div className={style.buttons}>
                <CircleButton
@@ -66,6 +119,7 @@ const Navbar = () => {
                   size={"3rem"}
                   onClick={toggleMenu}
                />
+
                <FilledButton
                   color={"#FFF"}
                   fontSize={"2rem"}

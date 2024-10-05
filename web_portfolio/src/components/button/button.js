@@ -45,4 +45,11 @@ const CircleButton = ({
       ></button>
    );
 };
-export { FilledButton, CircleButton };
+const MenuButton = ({ children: text, fontSize, onClick }) => {
+   return (
+      <div onClick={onClick}>
+         <p style={{ fontSize: fontSize }}>{text}</p>
+      </div>
+   );
+};
+export { FilledButton, CircleButton, MenuButton };
