@@ -37,16 +37,13 @@ const MenuPopUp = ({ isShown, onClose }) => {
             <div className={style.menuRight}>
                <div>
                   <MenuButton fontSize={"2rem"} onClick={onClose}>
-                     Hello
+                     Home
                   </MenuButton>
                   <MenuButton fontSize={"2rem"} onClick={onClose}>
-                     Hello
+                     Selector
                   </MenuButton>
                   <MenuButton fontSize={"2rem"} onClick={onClose}>
-                     Hello
-                  </MenuButton>
-                  <MenuButton fontSize={"2rem"} onClick={onClose}>
-                     Hello
+                     About Me
                   </MenuButton>
                </div>
             </div>
@@ -58,9 +55,17 @@ const MenuPopUp = ({ isShown, onClose }) => {
 
 const Navbar = () => {
    const [isMenuShown, setIsMenuShown] = useState(false);
+   const [isDebouncing, setIsDebouncing] = useState(false);
 
    const toggleMenu = () => {
+      if (isDebouncing) return;
+
+      setIsDebouncing(true);
       setIsMenuShown(!isMenuShown);
+
+      setTimeout(() => {
+         setIsDebouncing(false);
+      }, 1000);
    };
 
    const closeMenu = () => {
@@ -68,6 +73,9 @@ const Navbar = () => {
    };
 
    const socialLink = name => {
+      if (isMenuShown) {
+         closeMenu();
+      }
       switch (name) {
          case "github":
             window.location.href = "https://github.com/lindejacob";

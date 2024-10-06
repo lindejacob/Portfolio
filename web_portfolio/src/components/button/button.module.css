@@ -35,3 +35,28 @@
    font-weight: normal;
    border: 0.1em solid;
 }
+
+.menuButton {
+   cursor: pointer;
+}
+
+.menuButton > p {
+   position: relative;
+   display: inline-block;
+}
+
+.menuButton > p::after {
+   content: "";
+   position: absolute;
+   left: -10%;
+   right: -10%;
+   bottom: -0.2rem;
+   width: 0;
+   height: 0.15rem;
+   background-color: currentColor;
+   transition: width 0.3s ease;
+}
+
+.menuButton:hover > p::after {
+   width: 120%;
+}

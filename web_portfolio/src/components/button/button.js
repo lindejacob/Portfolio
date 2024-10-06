@@ -47,7 +47,7 @@ const CircleButton = ({
 };
 const MenuButton = ({ children: text, fontSize, onClick }) => {
    return (
-      <div onClick={onClick}>
+      <div className={styles.menuButton} onClick={onClick}>
          <p style={{ fontSize: fontSize }}>{text}</p>
       </div>
    );

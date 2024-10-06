@@ -6,7 +6,7 @@ function CircleZoom() {
    const { scrollYProgress } = useScroll();
    const minScale = 0.2;
 
-   const scale = useTransform(scrollYProgress, [0.0, 0.18], [minScale, 1.742]);
+   const scale = useTransform(scrollYProgress, [0.0, 0.18], [minScale, 1.66]);
 
    return (
       <motion.div

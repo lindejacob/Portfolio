@@ -1,5 +1,6 @@
 .circle {
    aspect-ratio: 1/1;
+   width: 60vw;
    border-radius: 50%;
    height: 100%;
    background-color: var(--secondary-color);

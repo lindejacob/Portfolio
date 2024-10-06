@@ -27,35 +27,39 @@
 .menu {
    display: flex;
    position: inherit;
-   top: 0;
-   right: 10%;
-   justify-content: center; /* Center children horizontally */
-   align-items: center; /* Center children vertically */
+   top: 1.5%;
+   right: 12%;
 }
 
 .menu > .menuRight {
    position: relative;
    border-radius: 0cap 2cap 2cap 0cap;
    background-color: var(--primary-color);
-   width: 25rem;
-   height: 40rem;
-   margin: auto; /* Center the element within the flex container */
+   width: 20rem;
+   height: 30rem;
 }
 
 .menuRight > div {
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
    padding-top: 6rem;
    width: 100%;
+   height: 11rem;
    right: 100%;
+   text-align: center;
+}
+
+.menuRight > div > div > p {
+   margin: auto;
 }
 
 .menu > .menuLeft {
    position: relative;
    border-radius: 2cap 0cap 0cap 2cap;
    background-color: #e1dbcc;
-   width: 20rem;
-   height: 40rem;
+   width: 15rem;
+   height: 30rem;
 }
 .navbar {
    position: fixed;
@@ -76,7 +80,7 @@
    align-items: center;
    margin-left: 1rem;
    justify-content: space-between;
-   width: 13%;
+   width: 14.5rem;
 }
 
 .social {
