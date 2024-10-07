@@ -35,7 +35,16 @@ const MenuPopUp = ({ isShown, onClose }) => {
          <div className={style.menu} ref={menuRef}>
             <div className={style.menuLeft}></div>
             <div className={style.menuRight}>
-               <div>
+               <div className={style.menuBtnContainer}>
+                  <CircleButton
+                     imageSize={"70%"}
+                     imageUrl={menubars}
+                     backgroundColor={"#252423"}
+                     size={"3rem"}
+                     onClick={onClose}
+                  />
+               </div>
+               <div className={style.menuNavBtnContainer}>
                   <MenuButton fontSize={"2rem"} onClick={onClose}>
                      Home
                   </MenuButton>
@@ -55,27 +64,15 @@ const MenuPopUp = ({ isShown, onClose }) => {
 
 const Navbar = () => {
    const [isMenuShown, setIsMenuShown] = useState(false);
-   const [isDebouncing, setIsDebouncing] = useState(false);
 
-   const toggleMenu = () => {
-      if (isDebouncing) return;
-
-      setIsDebouncing(true);
-      setIsMenuShown(!isMenuShown);
-
-      setTimeout(() => {
-         setIsDebouncing(false);
-      }, 1000);
+   const openMenu = () => {
+      setIsMenuShown(true);
    };
-
    const closeMenu = () => {
       setIsMenuShown(false);
    };
 
    const socialLink = name => {
-      if (isMenuShown) {
-         closeMenu();
-      }
       switch (name) {
          case "github":
             window.location.href = "https://github.com/lindejacob";
@@ -125,7 +122,7 @@ const Navbar = () => {
                   imageUrl={menubars}
                   backgroundColor={"#252423"}
                   size={"3rem"}
-                  onClick={toggleMenu}
+                  onClick={openMenu}
                />
 
                <FilledButton
