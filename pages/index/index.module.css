@@ -68,40 +68,36 @@
 .header {
    display: flex;
    justify-content: center;
+   flex-direction: column;
    align-items: center;
-   margin-bottom: 10rem;
+   width: 100vw;
    position: relative;
-   transform: translateX(-4.5%);
+   z-index: 6;
+   margin-bottom: 12rem;
 }
 
-.header h2 {
-   color: var(--primary-color);
-   font-weight: bold;
-   margin: 0;
+.arrow {
+   position: absolute;
+   left: 27%;
+   top: 20%;
    z-index: 2;
-}
-
-.header > div {
-   position: relative;
-   z-index: 1;
    transform: rotate(10deg);
-   top: 7rem;
 }
 
-.header > div > p {
-   position: relative;
-   bottom: 1rem;
-   left: 5rem;
+.arrow > p {
    font-family: "PermanentMarker";
+   font-size: 1rem;
+   transform: rotate(-40deg);
    color: var(--highlight-color);
-   transform: rotate(-30deg);
 }
 
+.header > h2 {
+   color: var(--primary-color);
+   font-weight: 800;
+}
 .projectSelector {
    position: relative;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   width: fit-content;
-   height: fit-content;
 }

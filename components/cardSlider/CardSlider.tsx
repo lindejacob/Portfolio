@@ -1,5 +1,5 @@
 import React, { useState, useRef, ReactNode, Children } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import styles from "./cardSlider.module.css";
 import { CircleButton } from "../buttons/Buttons";
 import arrow from "../../assets/arrow.svg";
@@ -44,10 +44,10 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
    };
 
    // Define animation variants for the cards
-   const cardVariants = {
+   const cardVariants: Variants = {
       center: {
          x: "0%",
-         scale: 1,
+         scale: 1.1,
          zIndex: 5,
          filter:
             "drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.3)) drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.5))",
@@ -55,11 +55,11 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
             delay: 0.1,
          },
       },
-      left: {
+      left1: {
          x: "-60%",
          y: "1%",
          rotate: "-20deg",
-         scale: 0.8,
+         scale: 1,
          zIndex: 4,
          pointerEvents: "none",
          filter: "none",
@@ -67,11 +67,33 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
             delay: 0.1,
          },
       },
+      left: {
+         x: "-20%",
+         scale: 0,
+         zIndex: 0,
+         pointerEvents: "none",
+         filter: "none",
+         opacity: 0,
+         transition: {
+            delay: 0.1,
+         },
+      },
       right: {
+         x: "20%",
+         scale: 0,
+         zIndex: 0,
+         pointerEvents: "none",
+         filter: "none",
+         opacity: 0,
+         transition: {
+            delay: 0.1,
+         },
+      },
+      right1: {
          x: "60%",
          y: "1%",
          rotate: "20deg",
-         scale: 0.8,
+         scale: 1,
          zIndex: 4,
          pointerEvents: "none",
          filter: "none",
@@ -86,28 +108,26 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
          pointerEvents: "none",
          filter: "none",
          opacity: 0,
+         transition: {
+            delay: 0.1,
+         },
       },
    };
+
+   const positions = ["left", "left1", "center", "right1", "right"];
 
    return (
       <div className={styles.cardSliderContainer}>
          {Children.map(children, (child, index) => {
             // Determine the position variant based on the index
-            const position =
-               positionIndexes[index] === 0
-                  ? "left"
-                  : positionIndexes[index] === 1
-                  ? "center"
-                  : positionIndexes[index] === 2
-                  ? "right"
-                  : "background";
+            const position = positions[positionIndexes[index]] || "background";
             return (
                <motion.div
                   key={index}
                   initial="center"
                   animate={position}
                   variants={cardVariants}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                   className={styles.cardWrapper}
                >
                   {child}
