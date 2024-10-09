@@ -1,0 +1,7 @@
+.skillCapsule {
+   background-color: transparent;
+   border: 0.1rem solid var(--primary-color);
+   border-radius: 1cap;
+   padding: 0.2rem 1rem;
+   display: inline-block;
+}

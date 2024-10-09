@@ -1,0 +1,118 @@
+.menuPopUp {
+   position: fixed;
+   margin: 0;
+   height: 100vh;
+   width: 100vw;
+   backdrop-filter: blur(5px);
+   z-index: 10;
+   transition: 0.2s;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menuPopUp.show {
+   opacity: 100%;
+   pointer-events: all;
+}
+
+.menuPopUp.hide {
+   opacity: 0%;
+   pointer-events: none;
+}
+
+.menuPopUpDisabled {
+   opacity: 0;
+   pointer-events: none;
+}
+
+.menuBtnContainer {
+   padding: 3.5%;
+   padding-right: 5%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.menu {
+   display: flex;
+   position: inherit;
+   top: 1.5%;
+   right: 10%;
+}
+
+.menu > .menuRight {
+   position: relative;
+   border-radius: 0cap 2cap 2cap 0cap;
+   background-color: var(--primary-color);
+   width: 20rem;
+   height: 30rem;
+}
+
+.menuNavBtnContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-top: 1rem;
+   width: 100%;
+   height: 11rem;
+   right: 100%;
+   text-align: center;
+}
+
+.menuRight > .menuNavBtnContainer > div > p {
+   margin: auto;
+}
+
+.menu > .menuLeft {
+   position: relative;
+   border-radius: 2cap 0cap 0cap 2cap;
+   background-color: #e1dbcc;
+   width: 15rem;
+   height: 30rem;
+}
+.navbar {
+   position: fixed;
+   display: flex;
+   opacity: 100%;
+   align-items: center;
+   justify-content: space-between;
+   height: auto;
+   width: 97.5vw;
+   padding: 0.8rem 2rem;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 9; /* Higher than .menuPopUp */
+}
+
+.navbar > .buttons {
+   display: flex;
+   align-items: center;
+   margin-left: 1rem;
+   justify-content: space-between;
+   width: 14.5rem;
+}
+
+.social {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   transform: translateY(1rem);
+}
+
+.social > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 10px;
+}
+
+.social > div > p {
+   color: var(--highlight-color);
+   font-family: "PermanentMarker";
+   text-align: center;
+   margin: 0;
+   opacity: 0;
+   transition: opacity 0.2s;
+}
+
+.social > div:hover > p {
+   opacity: 1;
+}

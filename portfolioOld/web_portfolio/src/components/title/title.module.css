@@ -1,0 +1,31 @@
+.headerDiv {
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.headerDiv h1 {
+   font-weight: bold;
+   font-style: normal;
+   font-size: 7rem;
+   width: 50rem;
+   overflow-wrap: break-word;
+   margin: 0rem;
+}
+
+.headerDiv .subheader {
+   display: flex;
+   flex-direction: row;
+}
+.subheader h2 {
+   display: inline-block;
+   margin-right: 0.3rem;
+   font-weight: 200;
+   font-size: 3em;
+}
+
+.subheader > .highlight {
+   color: var(--highlight-color);
+}
