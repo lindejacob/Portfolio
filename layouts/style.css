@@ -1,29 +1,101 @@
 /* Links */
 a {
-  text-decoration: none;
+   text-decoration: none;
 }
 #sidebar a {
-  padding: 2px 10px;
-  margin-left: -10px;
+   padding: 2px 10px;
+   margin-left: -10px;
 }
 #sidebar a.is-active {
-  background-color: #eee;
+   background-color: #eee;
 }
 
 /* Reset */
 body {
-  margin: 0;
-  font-family: sans-serif;
+   margin: 0;
+   font-family: sans-serif;
 }
 * {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 /* Page Transition Animation */
 #page-content {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+   transition: opacity 0.3s ease-in-out;
 }
 body.page-is-transitioning #page-content {
-  opacity: 0;
+   opacity: 0;
+}
+
+/* varibles */
+@font-face {
+   font-family: "PP Telegraf";
+   src: url("../assets/fonts/PPTelegraf/PPTelegraf-Regular.otf")
+      format("opentype");
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "PP Telegraf";
+   src: url("../assets/fonts/PPTelegraf/PPTelegraf-UltraBold.otf")
+      format("opentype");
+   font-weight: 800;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "PP Telegraf";
+   src: url("../assets/fonts/PPTelegraf/PPTelegraf-UltraLight.otf")
+      format("opentype");
+   font-weight: 200;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "PermanentMarker";
+   src: url("../assets/fonts/PermanenMarker/PermanentMarker-Regular.ttf");
+}
+
+* {
+   font-family: "PP Telegraf", sans-serif;
+   font-weight: 400;
+   color: #252423;
+   font-size: 10px;
+}
+
+:root {
+   --primary-color: #f8f1de;
+   --secondary-color: #252423;
+   --highlight-color: #ff6331;
+}
+
+h1 {
+   font-weight: bold;
+   font-style: normal;
+   font-size: 7rem;
+}
+h2 {
+   font-size: 3rem;
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+   * {
+      font-size: 12px;
+   }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+   * {
+      font-size: 12px;
+   }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1300px) {
+   * {
+      font-size: 16px;
+   }
 }

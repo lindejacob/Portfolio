@@ -1,14 +1,21 @@
-import { useState, useRef } from "react";
-import { delay, motion, transform } from "framer-motion";
+import React, { useState, useRef, ReactNode, Children } from "react";
+import { motion } from "framer-motion";
 import styles from "./cardSlider.module.css";
-import Card from "../../components/cards/cards.js";
-import { CircleButton } from "../button/button.js";
-import arrow from "../../img/arrow.svg";
+import { CircleButton } from "../buttons/Buttons";
+import arrow from "../../assets/arrow.svg";
 
-const CardSlider = ({ cards }) => {
-   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
+type CardSliderProps = {
+   children: ReactNode;
+};
+
+const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
+   const numChildren = Children.count(children);
+   const [positionIndexes, setPositionIndexes] = useState(
+      Array.from({ length: numChildren }, (_, i) => i)
+   );
    const lastClickTimeRef = useRef(0);
 
+   // Handle the next button click
    const handleNext = () => {
       const now = Date.now();
       if (now - lastClickTimeRef.current < 250) return;
@@ -16,12 +23,13 @@ const CardSlider = ({ cards }) => {
 
       setPositionIndexes(prevIndexes => {
          const updatedIndexes = prevIndexes.map(
-            prevIndex => (prevIndex + 1) % 5
+            prevIndex => (prevIndex + 1) % numChildren
          );
          return updatedIndexes;
       });
    };
 
+   // Handle the back button click
    const handleBack = () => {
       const now = Date.now();
       if (now - lastClickTimeRef.current < 250) return;
@@ -29,14 +37,13 @@ const CardSlider = ({ cards }) => {
 
       setPositionIndexes(prevIndexes => {
          const updatedIndexes = prevIndexes.map(
-            prevIndex => (prevIndex + 4) % 5
+            prevIndex => (prevIndex - 1 + numChildren) % numChildren
          );
          return updatedIndexes;
       });
    };
 
-   const positions = ["center", "left1", "left", "right", "right1"];
-
+   // Define animation variants for the cards
    const cardVariants = {
       center: {
          x: "0%",
@@ -48,7 +55,7 @@ const CardSlider = ({ cards }) => {
             delay: 0.1,
          },
       },
-      left1: {
+      left: {
          x: "-60%",
          y: "1%",
          rotate: "-20deg",
@@ -60,23 +67,7 @@ const CardSlider = ({ cards }) => {
             delay: 0.1,
          },
       },
-      left: {
-         x: "-20%",
-         scale: 0,
-         zIndex: 0,
-         pointerEvents: "none",
-         filter: "none",
-         opacity: 0,
-      },
       right: {
-         x: "20%",
-         scale: 0,
-         zIndex: 0,
-         pointerEvents: "none",
-         filter: "none",
-         opacity: 0,
-      },
-      right1: {
          x: "60%",
          y: "1%",
          rotate: "20deg",
@@ -88,22 +79,41 @@ const CardSlider = ({ cards }) => {
             delay: 0.1,
          },
       },
+      background: {
+         x: "0%",
+         scale: 0,
+         zIndex: 0,
+         pointerEvents: "none",
+         filter: "none",
+         opacity: 0,
+      },
    };
 
    return (
       <div className={styles.cardSliderContainer}>
-         {cards.map((card, index) => (
-            <motion.div
-               key={index}
-               initial="center"
-               animate={positions[positionIndexes[index]]}
-               variants={cardVariants}
-               transition={{ duration: 0.5 }}
-               className={styles.cardWrapper}
-            >
-               <Card {...card} />
-            </motion.div>
-         ))}
+         {Children.map(children, (child, index) => {
+            // Determine the position variant based on the index
+            const position =
+               positionIndexes[index] === 0
+                  ? "left"
+                  : positionIndexes[index] === 1
+                  ? "center"
+                  : positionIndexes[index] === 2
+                  ? "right"
+                  : "background";
+            return (
+               <motion.div
+                  key={index}
+                  initial="center"
+                  animate={position}
+                  variants={cardVariants}
+                  transition={{ duration: 0.5 }}
+                  className={styles.cardWrapper}
+               >
+                  {child}
+               </motion.div>
+            );
+         })}
          <div className="flex flex-row gap-3">
             <div className={styles.rightArrow}>
                <CircleButton

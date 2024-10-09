@@ -1,13 +1,13 @@
-.filledButton {
+.standardButton {
    height: 3rem;
    padding: 0.5rem 1rem;
    cursor: pointer;
-   border-radius: 2cap;
    border: none;
-   transition: 0.3s;
+   border-radius: 2cap;
+   transition: transform 0.3s;
 }
 
-.filledButton:hover {
+.standardButton:hover {
    transform: scale(1.1);
 }
 
@@ -15,25 +15,16 @@
    height: 3rem;
    padding: 0.5rem 1rem;
    cursor: pointer;
+   border: none;
    border-radius: 50%;
    background-position: center;
    background-repeat: no-repeat;
-   aspect-ratio: 1/1;
-   border: none;
-   transition: 0.3s;
+   aspect-ratio: 1 / 1;
+   transition: transform 0.3s;
 }
 
 .circleButton:hover {
    transform: scale(1.2);
-}
-
-.outlineButton {
-   background: none;
-   border-radius: 1cap;
-   padding: 0.5rem 1.5rem;
-   cursor: pointer;
-   font-weight: normal;
-   border: 0.1em solid;
 }
 
 .menuButton {

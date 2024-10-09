@@ -1,8 +1,8 @@
 .circle {
-   aspect-ratio: 1/1;
    width: 60vw;
-   border-radius: 50%;
    height: 100%;
+   aspect-ratio: 1 / 1;
+   border-radius: 50%;
    background-color: var(--secondary-color);
    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 50%);
    pointer-events: none;
