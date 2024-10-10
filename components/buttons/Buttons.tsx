@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Buttons.module.css";
 
 type StandardButtonProps = {
-   children: string;
+   children: React.ReactNode;
    color: string;
    backgroundColor?: string;
    fontSize: string;
@@ -51,7 +51,7 @@ export function CircleButton(props: CircleButtonProps) {
 }
 
 type MenuButtonProps = {
-   children: string;
+   children: React.ReactNode;
    fontSize: string;
    onClick?: () => void;
 };
