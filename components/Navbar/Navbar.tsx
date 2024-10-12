@@ -7,6 +7,10 @@ import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
 
 export function Navbar() {
+   function handleSocialClick(url: string) {
+      window.location.href = url;
+   }
+
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
    function handleToggleNavbar() {
@@ -35,23 +39,35 @@ export function Navbar() {
             <div className={style.socialContainer}>
                <CircleButton
                   imageUrl={imgGithub}
-                  imageSize="24px"
-                  backgroundColor="#000"
+                  imageSize="70%"
+                  backgroundColor="white"
+                  onClick={() =>
+                     handleSocialClick("https://github.com/lindejacob")
+                  }
                />
                <CircleButton
                   imageUrl={imgLinkedin}
-                  imageSize="24px"
-                  backgroundColor="#0077B5"
+                  imageSize="100%"
+                  backgroundColor="white"
+                  onClick={() =>
+                     handleSocialClick(
+                        "https://www.linkedin.com/in/jacob-m%C3%B8lholt-poulsen-24572b290/"
+                     )
+                  }
                />
             </div>
             <div className={style.buttonContainer}>
-               <StandardButton color="#000" fontSize="16px">
+               <StandardButton
+                  backgroundColor="var(--highlight-color)"
+                  color="var(--secondary-color)"
+                  fontSize="1.5rem"
+               >
                   Contact
                </StandardButton>
                <CircleButton
                   imageUrl={imgMenubars}
-                  imageSize="24px"
-                  backgroundColor="#fff"
+                  imageSize="70%"
+                  backgroundColor="var(--secondary-color)"
                   onClick={handleToggleNavbar}
                />
             </div>

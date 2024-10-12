@@ -56,7 +56,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
          },
       },
       left1: {
-         x: "-60%",
+         x: "-50%",
          y: "1%",
          rotate: "-20deg",
          scale: 1,
@@ -90,7 +90,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
          },
       },
       right1: {
-         x: "60%",
+         x: "50%",
          y: "1%",
          rotate: "20deg",
          scale: 1,

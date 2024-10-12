@@ -46,30 +46,28 @@
 }
 
 .navbar {
+   display: flex;
    position: fixed;
+   width: 100vw;
    top: 0;
    left: 50%;
    transform: translateX(-50%);
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 97.5vw;
-   padding: 0.8rem 2rem;
-   background-color: #333;
-   color: #fff;
    z-index: 9;
+   padding: 1rem 2rem;
 }
 
 .socialContainer {
    display: flex;
+   justify-content: space-between;
    align-items: center;
+   width: 7rem;
 }
 
 .buttonContainer {
    display: flex;
    align-items: center;
+   margin-left: auto;
 }
-
 .buttonContainer > button {
    margin-left: 1rem;
 }
