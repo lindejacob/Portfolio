@@ -17,6 +17,17 @@ export function Navbar() {
       setIsMenuOpen(!isMenuOpen);
    }
 
+   function Blurbackground({ isMenuOpen }: { isMenuOpen: boolean }) {
+      return (
+         <div
+            className={`${style.backgroundBlur} ${
+               isMenuOpen ? style.show : style.hide
+            }`}
+            onClick={handleToggleNavbar}
+         />
+      );
+   }
+
    function Menu({ isMenuOpen }: { isMenuOpen: boolean }) {
       return (
          <div
@@ -24,7 +35,11 @@ export function Navbar() {
                isMenuOpen ? style.show : style.hide
             }`}
          >
-            <div className={style.menu}>
+            <div
+               className={`${style.menu} ${
+                  isMenuOpen ? style.show : style.hide
+               }`}
+            >
                <div className={style.menuLeft}></div>
                <div className={style.menuRight}></div>
             </div>
@@ -34,47 +49,41 @@ export function Navbar() {
 
    return (
       <>
-         <Menu isMenuOpen={isMenuOpen} />
-         <div className={style.navbar}>
-            <div className={style.socialContainer}>
-               <CircleButton
-                  imageUrl={imgGithub}
-                  imageSize="70%"
-                  backgroundColor="white"
-                  onClick={() =>
-                     handleSocialClick("https://github.com/lindejacob")
-                  }
-               />
-               <CircleButton
-                  imageUrl={imgLinkedin}
-                  imageSize="100%"
-                  backgroundColor="white"
-                  onClick={() =>
-                     handleSocialClick(
-                        "https://www.linkedin.com/in/jacob-m%C3%B8lholt-poulsen-24572b290/"
-                     )
-                  }
-               />
-            </div>
-            <div className={style.buttonContainer}>
+         <Blurbackground isMenuOpen={isMenuOpen} />
+         <nav>
+            <div className={style.navbarButtonWrapper}>
                <StandardButton
                   backgroundColor="var(--highlight-color)"
-                  color="var(--secondary-color)"
-                  fontSize="1.5rem"
+                  color={"var(--secondary-color)"}
+                  fontSize={"1.5rem"}
                >
                   Contact
                </StandardButton>
-
-               <div>
+               <div className={style.menuWrap}>
+                  <Menu isMenuOpen={isMenuOpen} />
                   <CircleButton
                      imageUrl={imgMenubars}
-                     imageSize="70%"
-                     backgroundColor="var(--secondary-color)"
+                     imageSize={"70%"}
+                     backgroundColor={"var(--secondary-color)"}
                      onClick={handleToggleNavbar}
                   />
                </div>
             </div>
-         </div>
+            <div className={style.navbarSocialWrapper}>
+               <CircleButton
+                  imageUrl={imgLinkedin}
+                  imageSize={"100%"}
+                  backgroundColor={"white"}
+                  onClick={() => handleSocialClick("https://www.linkedin.com")}
+               />
+               <CircleButton
+                  imageUrl={imgGithub}
+                  imageSize={"80%"}
+                  backgroundColor={"white"}
+                  onClick={() => handleSocialClick("https://www.github.com")}
+               />
+            </div>
+         </nav>
       </>
    );
 }

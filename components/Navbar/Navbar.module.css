@@ -1,34 +1,67 @@
-.menuPopUp {
+.backgroundBlur {
    position: fixed;
-   top: 0;
-   left: 0;
-   height: 100vh;
    width: 100vw;
+   height: 100vw;
    backdrop-filter: blur(5px);
-   z-index: 10;
    transition: opacity 0.2s;
-   background-color: rgba(0, 0, 0, 0.3);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   background-color: "white";
+   z-index: 999;
 }
 
-.menuPopUp.show {
+.backgroundBlur.show {
    opacity: 1;
    pointer-events: all;
 }
 
-.menuPopUp.hide {
+.backgroundBlur.hide {
    opacity: 0;
    pointer-events: none;
 }
 
+nav {
+   align-items: center;
+   display: flex;
+   position: relative;
+   top: 3rem;
+}
+
+.navbarButtonWrapper {
+   position: fixed;
+   z-index: 999;
+   right: 0%;
+   display: flex;
+   padding: 2rem;
+   gap: 1rem;
+}
+
+.menuWrap {
+   display: flex;
+   position: relative;
+}
+
 .menu {
+   position: absolute;
    display: flex;
    background-color: white;
    border-radius: 10px;
    overflow: hidden;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: opacity 0.5s ease, transform 0.5s ease;
+   opacity: 0;
+   right: 0;
+   margin: -1rem -1rem 0 0;
+}
+
+.menu.show {
+   opacity: 1;
+   pointer-events: all;
+   transform: translateX(0);
+}
+
+.menu.hide {
+   opacity: 0;
+   pointer-events: none;
+   transform: translateX(100%); /* Optional: add a slight slide effect */
 }
 
 .menuLeft,
@@ -45,30 +78,12 @@
    background-color: var(--primary-color);
 }
 
-.navbar {
+.navbarSocialWrapper {
    display: flex;
+   z-index: 998;
+   width: 50%;
    position: fixed;
-   width: 100vw;
-   top: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   z-index: 9;
-   padding: 1rem 2rem;
-}
-
-.socialContainer {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 7rem;
-}
-
-.buttonContainer {
-   display: flex;
-   align-items: center;
-   margin-left: auto;
-}
-
-.buttonContainer > div {
-   margin-left: 1rem;
+   left: 0%;
+   padding: 2rem;
+   gap: 1rem;
 }
