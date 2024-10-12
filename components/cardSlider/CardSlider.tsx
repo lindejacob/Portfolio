@@ -54,6 +54,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
          transition: {
             delay: 0.1,
          },
+         cursor: "pointer",
       },
       left1: {
          x: "-50%",

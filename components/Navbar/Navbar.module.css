@@ -68,6 +68,7 @@
    align-items: center;
    margin-left: auto;
 }
-.buttonContainer > button {
+
+.buttonContainer > div {
    margin-left: 1rem;
 }

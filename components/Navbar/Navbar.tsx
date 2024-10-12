@@ -64,12 +64,15 @@ export function Navbar() {
                >
                   Contact
                </StandardButton>
-               <CircleButton
-                  imageUrl={imgMenubars}
-                  imageSize="70%"
-                  backgroundColor="var(--secondary-color)"
-                  onClick={handleToggleNavbar}
-               />
+
+               <div>
+                  <CircleButton
+                     imageUrl={imgMenubars}
+                     imageSize="70%"
+                     backgroundColor="var(--secondary-color)"
+                     onClick={handleToggleNavbar}
+                  />
+               </div>
             </div>
          </div>
       </>
