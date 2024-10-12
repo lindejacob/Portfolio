@@ -46,6 +46,7 @@
    font-size: 2rem;
    font-weight: normal;
    margin-bottom: 1rem;
+   color: var(--secondary-color);
 }
 
 .circleContainer {

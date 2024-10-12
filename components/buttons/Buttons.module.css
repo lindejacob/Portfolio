@@ -36,6 +36,7 @@
 .menuButton > p {
    position: relative;
    display: inline-block;
+   margin: 0;
 }
 
 .menuButton > p::after {

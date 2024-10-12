@@ -1,10 +1,11 @@
 import style from "./Navbar.module.css";
-import { StandardButton, CircleButton } from "../buttons/Buttons";
+import { StandardButton, CircleButton, MenuButton } from "../buttons/Buttons";
 import React, { useState } from "react";
 
 import imgMenubars from "../../assets/menubars.svg";
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
+import { color } from "framer-motion";
 
 export function Navbar() {
    function handleSocialClick(url: string) {
@@ -41,7 +42,19 @@ export function Navbar() {
                }`}
             >
                <div className={style.menuLeft}></div>
-               <div className={style.menuRight}></div>
+               <div className={style.menuRight}>
+                  <div>
+                     <MenuButton color="var(--secondary-color)" fontSize="2rem">
+                        Home
+                     </MenuButton>
+                     <MenuButton color="var(--secondary-color)" fontSize="2rem">
+                        Selector
+                     </MenuButton>
+                     <MenuButton color="var(--secondary-color)" fontSize="2rem">
+                        About
+                     </MenuButton>
+                  </div>
+               </div>
             </div>
          </div>
       );

@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Buttons.module.css";
+import ReactNode from "react";
+import { color } from "framer-motion";
 
 type StandardButtonProps = {
    children: React.ReactNode;
@@ -7,7 +9,7 @@ type StandardButtonProps = {
    backgroundColor?: string;
    fontSize: string;
    border?: string;
-   onClick?: () => void;
+   onClick?: React.ReactNode;
 };
 
 export function StandardButton(props: StandardButtonProps) {
@@ -53,11 +55,16 @@ export function CircleButton(props: CircleButtonProps) {
 type MenuButtonProps = {
    children: React.ReactNode;
    fontSize: string;
+   color: string;
    onClick?: () => void;
 };
 
 export function MenuButton(props: MenuButtonProps) {
-   <div className={styles.menuButton} onClick={props.onClick}>
-      <p style={{ fontSize: props.fontSize }}>{props.children}</p>
-   </div>;
+   return (
+      <div className={styles.menuButton} onClick={props.onClick}>
+         <p style={{ fontSize: props.fontSize, color: props.color }}>
+            {props.children}
+         </p>
+      </div>
+   );
 }

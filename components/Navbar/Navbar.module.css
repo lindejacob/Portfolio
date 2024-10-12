@@ -4,7 +4,7 @@
    height: 100vw;
    backdrop-filter: blur(5px);
    transition: opacity 0.2s;
-   background-color: "white";
+   background-color: rgba(0, 0, 0, 0.3);
    z-index: 999;
 }
 
@@ -76,6 +76,13 @@ nav {
 
 .menuRight {
    background-color: var(--primary-color);
+}
+
+.menuRight > div {
+   margin-top: 6rem;
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
 }
 
 .navbarSocialWrapper {
