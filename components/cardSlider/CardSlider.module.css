@@ -8,15 +8,19 @@
    justify-content: center;
 }
 
-.leftArrow {
+.leftArrow,
+.rightArrow {
    position: absolute;
-   left: 30%;
-   margin-top: 5rem;
-   transform: rotateY(180deg);
+   top: 50%;
+   /* Remove the transform property here */
+}
+
+.leftArrow {
+   left: 20%;
+   transform: translateY(450%) rotateY(180deg); /* Combine transforms */
 }
 
 .rightArrow {
-   position: absolute;
-   right: 30%;
-   margin-top: 5rem;
+   right: 20%;
+   transform: translateY(450%); /* Apply the same translateY */
 }

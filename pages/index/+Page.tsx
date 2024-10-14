@@ -34,7 +34,7 @@ export default function Page() {
                   effectStart={0}
                   effectEnd={0.18}
                   minScale={0.2}
-                  maxScale={1.66}
+                  maxScale={1.9}
                />
             </div>
             <DarkenScreen effectStart={0.0} effectEnd={0.18} />
@@ -42,10 +42,12 @@ export default function Page() {
 
          <section className={styles.projectSelectorSection}>
             <div className={styles.header}>
-               <h2>Projects of interest</h2>
-               <div className={styles.arrow}>
-                  <img src={curlyHighlightArrow} alt="Curly arrow" />
-                  <p>Click to see project</p>
+               <div className={styles.arrowWrap}>
+                  <h2>Projects of interest</h2>
+                  <div className={styles.arrow}>
+                     <img src={curlyHighlightArrow} alt="Curly arrow" />
+                     <p>Click to see project</p>
+                  </div>
                </div>
             </div>
 

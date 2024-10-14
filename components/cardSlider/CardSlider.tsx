@@ -135,8 +135,8 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
                </motion.div>
             );
          })}
-         <div className="flex flex-row gap-3">
-            <div className={styles.rightArrow}>
+         <div className={styles.navigationButtons}>
+            <div className={styles.leftArrow}>
                <CircleButton
                   backgroundColor={"transparent"}
                   imageSize={"100%"}
@@ -144,7 +144,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
                   onClick={handleBack}
                />
             </div>
-            <div className={styles.leftArrow}>
+            <div className={styles.rightArrow}>
                <CircleButton
                   backgroundColor={"transparent"}
                   imageSize={"100%"}
