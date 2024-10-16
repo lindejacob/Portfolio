@@ -14,7 +14,7 @@ import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 
 export default function Page() {
    return (
-      <>
+      <main>
          <section className={styles.startSection}>
             <div className={styles.titleContainer}>
                <h1>Jacob Mølholt Poulsen</h1>
@@ -86,6 +86,6 @@ export default function Page() {
                </CardSlider>
             </div>
          </section>
-      </>
+      </main>
    );
 }

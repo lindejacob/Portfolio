@@ -1,0 +1,107 @@
+body {
+   margin: 0;
+   padding: 0;
+   background-color: var(
+      --secondary-color
+   ); /* Ensure the body has a background color */
+   min-height: 100vh; /* Ensure the body covers the full viewport height */
+}
+
+section {½½
+   width: 100vw;
+   min-height: 100vh; /* Ensure the section covers the full viewport height */
+   background-color: var(--secondary-color);
+}
+
+* {
+   color: var(--primary-color);
+}
+
+.titleSection {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.header {
+   margin-top: 4rem;
+}
+
+.header > h1 {
+   font-weight: 400;
+   margin: 0;
+}
+
+.header > p {
+   width: auto;
+   text-align: center;
+   opacity: 80%;
+   font-size: 1.2rem;
+}
+
+.skillContainer {
+   display: flex;
+   justify-content: space-between;
+   width: 25%;
+}
+
+.titleImageContainer {
+   transform: scale(0.6);
+}
+
+.titleImageContainer > img {
+   border: 0.2rem solid rgb(155, 155, 155);
+   border-radius: 2cap;
+   height: 45rem;
+}
+
+.contentGrid {
+   width: 100%;
+   display: grid;
+   grid-template-rows: 50% 50%;
+   grid-template-columns: 50% 50%;
+   align-items: center; /* Center vertically */
+   gap: 5rem;
+}
+
+.contentContainer {
+   grid-row: span 2; /* Span two rows */
+   grid-column: 1; /* Place in the first column */
+   padding-top: 3rem;
+   padding-left: 6rem;
+}
+
+.info p:nth-child(1) {
+   opacity: 80%;
+   font-size: 0.8rem;
+   margin-bottom: 0.3rem;
+}
+
+.info p:nth-child(2) {
+   margin-top: 0;
+   font-size: 1.1rem;
+}
+
+.aboutContainer p:nth-child(1) {
+   opacity: 80%;
+   margin-bottom: 0.3rem;
+}
+
+.aboutContainer p:nth-child(2) {
+   margin-top: 0;
+   font-size: 1.2rem;
+}
+
+.imgContainer > img {
+   height: 20rem;
+}
+
+.imgContainer:nth-child(3) {
+   grid-row: 1; /* Span two rows */
+   grid-column: 2; /* Place in the second column */
+}
+
+.imgContainer:nth-child(2) {
+   grid-row: 2; /* Span two rows */
+   grid-column: 2; /* Place in the second column */
+}
