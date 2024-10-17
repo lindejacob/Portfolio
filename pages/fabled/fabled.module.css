@@ -1,19 +1,16 @@
 body {
    margin: 0;
    padding: 0;
-   background-color: var(
-      --secondary-color
-   ); /* Ensure the body has a background color */
-   min-height: 100vh; /* Ensure the body covers the full viewport height */
-}
-
-section {½½
-   width: 100vw;
-   min-height: 100vh; /* Ensure the section covers the full viewport height */
    background-color: var(--secondary-color);
 }
 
-* {
+section {
+   width: 100vw;
+   min-height: 100vh;
+   background-color: var(--secondary-color);
+}
+
+.fabled > * {
    color: var(--primary-color);
 }
 
@@ -21,15 +18,11 @@ section {½½
    display: flex;
    flex-direction: column;
    align-items: center;
-}
 
-.header {
-   margin-top: 4rem;
+   height: 150vh;
 }
-
 .header > h1 {
    font-weight: 400;
-   margin: 0;
 }
 
 .header > p {
@@ -46,13 +39,12 @@ section {½½
 }
 
 .titleImageContainer {
-   transform: scale(0.6);
+   border-radius: 2cap;
 }
 
 .titleImageContainer > img {
+   height: 30rem;
    border: 0.2rem solid rgb(155, 155, 155);
-   border-radius: 2cap;
-   height: 45rem;
 }
 
 .contentGrid {
