@@ -114,8 +114,17 @@
 .aboutMeSection {
    margin: 0;
    background-color: var(--primary-color);
-   height: 100vh;
-   padding: 5rem;
+   height: 100%;
+   padding: 5rem 5rem 2rem 5rem;
+}
+
+.contentContainer {
+   display: flex;
+}
+
+.infoContainer {
+   width: 50%;
+   height: 35rem;
 }
 
 h3 {
@@ -129,8 +138,9 @@ h2 {
 }
 
 .nameContainer,
-.studyContainer {
-   margin: 5rem 0rem;
+.studyContainer,
+.aboutText {
+   margin: 1rem 0rem;
 }
 
 .nameContainer > h2 {
@@ -141,5 +151,43 @@ h2 {
 .aboutText {
    color: var(--secondary-color);
    font-size: 1.5rem;
-   width: 40%;
+}
+
+.skillsBtnContainer {
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   left: 50%;
+   bottom: 15%;
+   transform: translateX(-50%);
+   pointer-events: none;
+}
+
+.profileImgContainer {
+   width: 50%;
+   height: 35rem;
+   display: flex;
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+}
+
+.profileImgContainer img {
+   width: 50%;
+}
+
+.skillsBtnContainer {
+   margin-top: 5rem;
+   margin-bottom: 0rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   pointer-events: none;
+   width: 100%;
+
+   p {
+      color: var(--secondary-color);
+      width: 100%;
+      text-align: center;
+   }
 }
