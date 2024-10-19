@@ -86,6 +86,25 @@ export default function Page() {
                </CardSlider>
             </div>
          </section>
+         <section className={styles.aboutMeSection}>
+            <div className={styles.contentContainer}>
+               <div className={styles.nameContainer}>
+                  <h3>Who is</h3>
+                  <h2>Jacob Mølholt Poulsen</h2>
+               </div>
+               <div className={styles.studyContainer}>
+                  <h3>Studying</h3>
+                  <h2>Software engineering</h2>
+               </div>
+               <p className={styles.aboutText}>
+                  Lorem ipsum dolor sit amet consectetur. Pharetra fringilla
+                  velit scelerisque rhoncus. Pulvinar vitae nisi ultrices amet
+                  cras integer proin commodo. Eget placerat adipiscing egestas
+                  risus nisi ultrices suscipit massa molestie. Odio velit non
+                  risus morbi pretium leo.
+               </p>
+            </div>
+         </section>
       </main>
    );
 }
