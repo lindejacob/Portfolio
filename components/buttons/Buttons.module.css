@@ -28,18 +28,18 @@
 .circleButton:hover {
    transform: scale(1.2);
 }
-
 .menuButton {
    cursor: pointer;
+   text-align: center;
 }
 
-.menuButton > p {
+.menuButton > a {
    position: relative;
    display: inline-block;
    margin: 0;
 }
 
-.menuButton > p::after {
+.menuButton > a::after {
    content: "";
    position: absolute;
    left: -10%;
@@ -51,6 +51,6 @@
    transition: width 0.3s ease;
 }
 
-.menuButton:hover > p::after {
+.menuButton:hover > a::after {
    width: 120%;
 }

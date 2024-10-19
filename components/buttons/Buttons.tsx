@@ -9,7 +9,7 @@ type StandardButtonProps = {
    backgroundColor?: string;
    fontSize: string;
    border?: string;
-   onClick?: React.ReactNode;
+   onClick?: () => void;
 };
 
 export function StandardButton(props: StandardButtonProps) {
@@ -56,15 +56,19 @@ type MenuButtonProps = {
    children: React.ReactNode;
    fontSize: string;
    color: string;
+   href?: string;
    onClick?: () => void;
 };
 
 export function MenuButton(props: MenuButtonProps) {
    return (
       <div className={styles.menuButton} onClick={props.onClick}>
-         <p style={{ fontSize: props.fontSize, color: props.color }}>
+         <a
+            href={props.href}
+            style={{ fontSize: props.fontSize, color: props.color }}
+         >
             {props.children}
-         </p>
+         </a>
       </div>
    );
 }

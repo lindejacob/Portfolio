@@ -41,7 +41,7 @@ export default function Page() {
             <DarkenScreen effectStart={0.0} effectEnd={0.18} />
          </section>
 
-         <section className={styles.projectSelectorSection}>
+         <section id="selection-id" className={styles.projectSelectorSection}>
             <div className={styles.header}>
                <div className={styles.arrowWrap}>
                   <h2>Projects of interest</h2>
@@ -87,7 +87,7 @@ export default function Page() {
                </CardSlider>
             </div>
          </section>
-         <section className={styles.aboutMeSection}>
+         <section id="about-id" className={styles.aboutMeSection}>
             <div className={styles.contentContainer}>
                <div className={styles.infoContainer}>
                   <div className={styles.nameContainer}>

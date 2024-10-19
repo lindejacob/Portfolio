@@ -44,13 +44,28 @@ export function Navbar() {
                <div className={style.menuLeft}></div>
                <div className={style.menuRight}>
                   <div>
-                     <MenuButton color="var(--secondary-color)" fontSize="2rem">
+                     <MenuButton
+                        href="./"
+                        onClick={handleToggleNavbar}
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
                         Home
                      </MenuButton>
-                     <MenuButton color="var(--secondary-color)" fontSize="2rem">
+                     <MenuButton
+                        onClick={handleToggleNavbar}
+                        href="#selection-id"
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
                         Selector
                      </MenuButton>
-                     <MenuButton color="var(--secondary-color)" fontSize="2rem">
+                     <MenuButton
+                        onClick={handleToggleNavbar}
+                        href="#about-id"
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
                         About
                      </MenuButton>
                   </div>
