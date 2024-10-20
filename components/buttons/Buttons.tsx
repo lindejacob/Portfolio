@@ -52,6 +52,23 @@ export function CircleButton(props: CircleButtonProps) {
    );
 }
 
+type SquareButtonProps = {
+   backgroundColor: string;
+   imgUrl: string;
+   imgAlt: string;
+};
+
+export function SquareButton(props: SquareButtonProps) {
+   return (
+      <div
+         style={{ backgroundColor: props.backgroundColor }}
+         className={styles.squareButton}
+      >
+         <img src={props.imgUrl} alt={props.imgAlt} />
+      </div>
+   );
+}
+
 type MenuButtonProps = {
    children: React.ReactNode;
    fontSize: string;

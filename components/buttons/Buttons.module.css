@@ -28,6 +28,17 @@
 .circleButton:hover {
    transform: scale(1.2);
 }
+
+.squareButton {
+   display: flex;
+   aspect-ratio: 1/1;
+   width: 4rem;
+   justify-content: center;
+   align-items: center;
+   padding: 0.5rem;
+   border-radius: 25%;
+}
+
 .menuButton {
    cursor: pointer;
    text-align: center;

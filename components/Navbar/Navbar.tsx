@@ -54,7 +54,7 @@ export function Navbar() {
                      </MenuButton>
                      <MenuButton
                         onClick={handleToggleNavbar}
-                        href="#selection-id"
+                        href="./#selection-id"
                         color="var(--secondary-color)"
                         fontSize="2rem"
                      >
@@ -62,7 +62,7 @@ export function Navbar() {
                      </MenuButton>
                      <MenuButton
                         onClick={handleToggleNavbar}
-                        href="#about-id"
+                        href="./#about-id"
                         color="var(--secondary-color)"
                         fontSize="2rem"
                      >

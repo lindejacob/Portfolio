@@ -1,0 +1,26 @@
+.skillBox {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   width: 20rem;
+}
+
+.textContainer {
+   display: flex;
+   flex-direction: column;
+}
+
+.textContainer p {
+   color: var(--secondary-color);
+   margin: 0;
+}
+
+.textContainer p:nth-child(1) {
+   font-weight: 800;
+   font-size: 2rem;
+}
+
+.textContainer p:nth-child(2) {
+   opacity: 70%;
+   font-size: 1.2rem;
+}
