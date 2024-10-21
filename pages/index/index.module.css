@@ -200,6 +200,5 @@
    flex-direction: row;
    gap: 5rem;
    flex-wrap: wrap;
-   width: 80%;
    justify-content: center;
 }
