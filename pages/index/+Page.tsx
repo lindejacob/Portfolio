@@ -98,6 +98,7 @@ export default function Page() {
                   <div className={styles.studyContainer}>
                      <h3>Studying</h3>
                      <h4>Software engineering</h4>
+                     <p>3rd semester - Aalborg University</p>
                   </div>
                   <p className={styles.aboutText}>
                      Lorem ipsum dolor sit amet consectetur. Pharetra fringilla

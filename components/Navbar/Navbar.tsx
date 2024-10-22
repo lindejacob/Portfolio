@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import imgMenubars from "../../assets/menubars.svg";
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
-import { color } from "framer-motion";
 
 export function Navbar() {
    function handleSocialClick(url: string) {

@@ -3,8 +3,8 @@
    width: 100vw;
    height: 100vw;
    backdrop-filter: blur(5px);
-   transition: opacity 0.2s;
-   background-color: rgba(0, 0, 0, 0.3);
+   opacity: 0;
+   transition: opacity 0.5s ease;
    z-index: 999;
 }
 
@@ -15,7 +15,6 @@
 
 .backgroundBlur.hide {
    opacity: 0;
-   pointer-events: none;
 }
 
 nav {
@@ -46,10 +45,11 @@ nav {
    border-radius: 10px;
    overflow: hidden;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   transition: opacity 0.5s ease, transform 0.5s ease;
    opacity: 0;
+   transform: translateX(100%);
    right: 0;
    margin: -1rem -1rem 0 0;
+   transition: all 0.5s ease;
 }
 
 .menu.show {
@@ -61,7 +61,7 @@ nav {
 .menu.hide {
    opacity: 0;
    pointer-events: none;
-   transform: translateX(100%); /* Optional: add a slight slide effect */
+   transform: translateX(100%);
 }
 
 .menuLeft,
