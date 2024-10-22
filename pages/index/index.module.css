@@ -162,6 +162,22 @@
    }
 }
 
+.studyContainer {
+   h3 {
+      font-size: 2rem;
+      font-weight: 800;
+   }
+
+   h4 {
+      font-size: 1.5rem;
+   }
+
+   p {
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+   }
+}
+
 .aboutText {
    color: var(--secondary-color);
    font-size: 1.5rem;
@@ -200,5 +216,6 @@
    flex-direction: row;
    gap: 5rem;
    flex-wrap: wrap;
+   width: 80%;
    justify-content: center;
 }
