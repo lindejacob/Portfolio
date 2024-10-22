@@ -1,11 +1,9 @@
 import style from "./Navbar.module.css";
 import { StandardButton, CircleButton, MenuButton } from "../buttons/Buttons";
 import React, { useState } from "react";
-
 import imgMenubars from "../../assets/menubars.svg";
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
-import { color } from "framer-motion";
 
 export function Navbar() {
    function handleSocialClick(url: string) {
@@ -41,7 +39,50 @@ export function Navbar() {
                   isMenuOpen ? style.show : style.hide
                }`}
             >
-               <div className={style.menuLeft}></div>
+               <div className={style.menuLeft}>
+                  <div>
+                     <MenuButton
+                        href="/fabled"
+                        onClick={handleToggleNavbar}
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
+                        Fabled
+                     </MenuButton>
+                     <MenuButton
+                        href="/fabled"
+                        onClick={handleToggleNavbar}
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
+                        Fabled
+                     </MenuButton>
+                     <MenuButton
+                        href="/fabled"
+                        onClick={handleToggleNavbar}
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
+                        Fabled
+                     </MenuButton>
+                     <MenuButton
+                        href="/fabled"
+                        onClick={handleToggleNavbar}
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
+                        Fabled
+                     </MenuButton>
+                     <MenuButton
+                        href="/fabled"
+                        onClick={handleToggleNavbar}
+                        color="var(--secondary-color)"
+                        fontSize="2rem"
+                     >
+                        Fabled
+                     </MenuButton>
+                  </div>
+               </div>
                <div className={style.menuRight}>
                   <div>
                      <MenuButton
