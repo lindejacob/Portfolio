@@ -219,3 +219,10 @@
    width: 80%;
    justify-content: center;
 }
+
+.contactSection {
+   margin: 0;
+   background-color: var(--secondary-color);
+   height: 100%;
+   padding: 10rem 5rem 2rem 5rem;
+}

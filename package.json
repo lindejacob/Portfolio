@@ -8,6 +8,7 @@
     "deploy": "run-s build deploy:wrangler"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.52.0",
     "@vitejs/plugin-react": "^4.3.3",
     "framer-motion": "^11.11.9",
     "react": "^18.3.1",

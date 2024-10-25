@@ -13,6 +13,7 @@ import arrowDown from "../../assets/arrowDown.svg";
 import fabledCard from "../../assets/fabledCard.svg";
 import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 import profilePicture from "../../assets/TempPic.png";
+import { MailCopy } from "../../components/mailCopy/MailCopy";
 
 export default function Page() {
    return (
@@ -210,6 +211,9 @@ export default function Page() {
                   {"Database"}
                </SkillBox>
             </div>
+         </section>
+         <section className={styles.contactSection}>
+            <MailCopy />
          </section>
       </main>
    );
