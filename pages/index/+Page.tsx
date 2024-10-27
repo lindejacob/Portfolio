@@ -9,11 +9,11 @@ import CardSlider from "../../components/cardSlider/CardSlider";
 import { Card } from "../../components/card/Card";
 import { SkillBox } from "../../components/skills/Skills";
 
-import arrowDown from "../../assets/arrowDown.svg";
 import fabledCard from "../../assets/fabledCard.svg";
 import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 import profilePicture from "../../assets/TempPic.png";
 import { MailCopy } from "../../components/mailCopy/MailCopy";
+import { ArrowDown } from "react-bootstrap-icons";
 
 export default function Page() {
    return (
@@ -26,11 +26,11 @@ export default function Page() {
             <div className={styles.scrollBtnContainer}>
                <p>Scroll</p>
                <CircleButton
-                  imageUrl={arrowDown}
-                  imageSize={"50%"}
                   backgroundColor={"var(--highlight-color"}
                   size={"3rem"}
-               />
+               >
+                  <ArrowDown size={"2rem"} />
+               </CircleButton>
             </div>
             <div className={styles.circleContainer}>
                <CircleZoom
@@ -116,11 +116,11 @@ export default function Page() {
             <div className={styles.skillsBtnContainer}>
                <p>Skills</p>
                <CircleButton
-                  imageUrl={arrowDown}
-                  imageSize={"50%"}
                   backgroundColor={"var(--highlight-color"}
                   size={"3rem"}
-               />
+               >
+                  <ArrowDown size={"2rem"} />
+               </CircleButton>
             </div>
 
             <div className={styles.skillContainer}>

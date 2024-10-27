@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./MailCopy.module.css";
-import { Email, LocationCurrent, Checkmark } from "@carbon/icons-react"; // Import the new icon
+import { Check2, Envelope } from "react-bootstrap-icons";
 
 export function MailCopy() {
    const textToCopy = "Lindejacob0612@gmail.com";
@@ -26,7 +26,7 @@ export function MailCopy() {
          setTimeout(() => {
             setFeedback("none");
             setIsBlocked(false);
-         }, 10000); // 10 seconds
+         }, 2000); // 10 seconds
       }
    };
 
@@ -47,7 +47,7 @@ export function MailCopy() {
          >
             <div className={styles.mailContainer}>
                <div>
-                  <Email size={"6rem"} />
+                  <Envelope size={"6rem"} color={"var(--secondary-color)"} />
                </div>
                <p>{textToCopy}</p>
             </div>
@@ -57,21 +57,13 @@ export function MailCopy() {
          </div>
          <div className={styles.feedbackContainer}>
             <div
-               className={`${styles.cursor} ${
-                  feedback === "hover"
-                     ? styles.hover
-                     : feedback === "clicked"
-                     ? styles.clicked
-                     : styles.hide
+               className={`${styles.feedback} ${
+                  feedback === "clicked" ? styles.clicked : styles.hide
                }`}
             >
-               {feedback === "clicked" ? (
-                  <Checkmark
-                     size={"6rem"}
-                     style={{ color: "var(--highlight-color))" }}
-                  />
-               ) : (
-                  <LocationCurrent size={"6rem"} />
+               {" "}
+               {feedback === "clicked" && (
+                  <Check2 size={"6rem"} color={"var(--highlight-color)"} />
                )}
             </div>
          </div>

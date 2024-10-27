@@ -1,9 +1,9 @@
-import style from "./Navbar.module.css";
+import styles from "./Navbar.module.css";
 import { StandardButton, CircleButton, MenuButton } from "../buttons/Buttons";
 import React, { useState } from "react";
-import imgMenubars from "../../assets/menubars.svg";
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
+import { List } from "react-bootstrap-icons";
 
 export function Navbar() {
    function handleSocialClick(url: string) {
@@ -19,100 +19,11 @@ export function Navbar() {
    function Blurbackground({ isMenuOpen }: { isMenuOpen: boolean }) {
       return (
          <div
-            className={`${style.backgroundBlur} ${
-               isMenuOpen ? style.show : style.hide
+            className={`${styles.backgroundBlur} ${
+               isMenuOpen ? styles.show : styles.hide
             }`}
             onClick={handleToggleNavbar}
          />
-      );
-   }
-
-   function Menu({ isMenuOpen }: { isMenuOpen: boolean }) {
-      return (
-         <div
-            className={`${style.menuPopUp} ${
-               isMenuOpen ? style.show : style.hide
-            }`}
-         >
-            <div
-               className={`${style.menu} ${
-                  isMenuOpen ? style.show : style.hide
-               }`}
-            >
-               <div className={style.menuLeft}>
-                  <div>
-                     <MenuButton
-                        href="/fabled"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Fabled
-                     </MenuButton>
-                     <MenuButton
-                        href="/fabled"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Fabled
-                     </MenuButton>
-                     <MenuButton
-                        href="/fabled"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Fabled
-                     </MenuButton>
-                     <MenuButton
-                        href="/fabled"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Fabled
-                     </MenuButton>
-                     <MenuButton
-                        href="/fabled"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Fabled
-                     </MenuButton>
-                  </div>
-               </div>
-               <div className={style.menuRight}>
-                  <div>
-                     <MenuButton
-                        href="./"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Home
-                     </MenuButton>
-                     <MenuButton
-                        onClick={handleToggleNavbar}
-                        href="./#selection-id"
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Selector
-                     </MenuButton>
-                     <MenuButton
-                        onClick={handleToggleNavbar}
-                        href="./#about-id"
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        About
-                     </MenuButton>
-                  </div>
-               </div>
-            </div>
-         </div>
       );
    }
 
@@ -120,38 +31,22 @@ export function Navbar() {
       <>
          <Blurbackground isMenuOpen={isMenuOpen} />
          <nav>
-            <div className={style.navbarButtonWrapper}>
+            <div className={styles.rightNavbar}>
+               <CircleButton
+                  backgroundColor={"var(--secondary-color)"}
+                  onClick={handleToggleNavbar}
+               >
+                  <List color={"var(--primary-color)"} size={"2.2rem"} />
+               </CircleButton>
                <StandardButton
-                  backgroundColor="var(--highlight-color)"
                   color={"var(--secondary-color)"}
                   fontSize={"1.5rem"}
+                  backgroundColor={"var(--highlight-color)"}
                >
-                  Contact
+                  {"Contact"}
                </StandardButton>
-               <div className={style.menuWrap}>
-                  <Menu isMenuOpen={isMenuOpen} />
-                  <CircleButton
-                     imageUrl={imgMenubars}
-                     imageSize={"70%"}
-                     backgroundColor={"var(--secondary-color)"}
-                     onClick={handleToggleNavbar}
-                  />
-               </div>
             </div>
-            <div className={style.navbarSocialWrapper}>
-               <CircleButton
-                  imageUrl={imgLinkedin}
-                  imageSize={"100%"}
-                  backgroundColor={"white"}
-                  onClick={() => handleSocialClick("https://www.linkedin.com")}
-               />
-               <CircleButton
-                  imageUrl={imgGithub}
-                  imageSize={"80%"}
-                  backgroundColor={"white"}
-                  onClick={() => handleSocialClick("https://www.github.com")}
-               />
-            </div>
+            <div className={styles.leftNavbar}></div>
          </nav>
       </>
    );
