@@ -1,7 +1,6 @@
 import style from "./Navbar.module.css";
 import { StandardButton, CircleButton, MenuButton } from "../buttons/Buttons";
 import React, { useState } from "react";
-
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
 import { List } from "react-bootstrap-icons";
@@ -50,7 +49,43 @@ export function Navbar() {
                            isMenuOpen ? style.show : style.hide
                         }`}
                      >
-                        <div className={style.menuLeft}></div>
+                        <div className={style.menuLeft}>
+                           <p>Projects</p>
+                           <div>
+                              <MenuButton
+                                 href="/fabled"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Fabled
+                              </MenuButton>
+                              <MenuButton
+                                 href="/fabled"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Fabled
+                              </MenuButton>
+                              <MenuButton
+                                 href="/fabled"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Fabled
+                              </MenuButton>
+                              <MenuButton
+                                 href="/fabled"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Fabled
+                              </MenuButton>
+                           </div>
+                        </div>
                         <div className={style.menuRight}>
                            <div>
                               <MenuButton

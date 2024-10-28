@@ -22,7 +22,11 @@ export function Card(props: CardProps) {
    const paperclip = props.paperclipBool ? paperclipUrl : null;
 
    return (
-      <div style={{ transform: `scale(${props.size})` }} onClick={handleClick}>
+      <div
+         className={styles.card}
+         style={{ transform: `scale(${props.size})` }}
+         onClick={handleClick}
+      >
          {paperclip && (
             <img src={paperclip} alt="paperclip" className={styles.paperclip} />
          )}

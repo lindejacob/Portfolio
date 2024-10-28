@@ -61,17 +61,33 @@ nav {
 .menu.hide {
    opacity: 0;
    pointer-events: none;
-   transform: translateX(100%); /* Optional: add a slight slide effect */
+   transform: translateX(100%);
 }
 
 .menuLeft,
 .menuRight {
+   display: flex;
+   flex-direction: column;
    width: 15rem;
    height: 30rem;
+   align-items: center;
 }
-
 .menuLeft {
    background-color: #e1dbcc;
+
+   p {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0;
+      font-weight: 800;
+   }
+}
+
+.menuLeft > div {
+   display: flex;
+   gap: 1.5rem;
+   flex-direction: column;
+   margin-top: 2rem;
 }
 
 .menuRight {

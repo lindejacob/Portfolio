@@ -61,30 +61,35 @@ export default function Page() {
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
                   />
                   <Card
                      paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
                   />
                   <Card
                      paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
                   />
                   <Card
                      paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
                   />
                   <Card
                      paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
                   />
                </CardSlider>
             </div>
