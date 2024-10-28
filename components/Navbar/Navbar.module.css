@@ -3,9 +3,9 @@
    width: 100vw;
    height: 100vw;
    backdrop-filter: blur(5px);
+   transition: opacity 0.2s;
    background-color: rgba(0, 0, 0, 0.3);
    z-index: 999;
-   transition: opacity 0.2s linear;
 }
 
 .backgroundBlur.show {
@@ -19,15 +19,78 @@
 }
 
 nav {
-   position: fixed;
+   align-items: center;
    display: flex;
-   padding: 1rem;
-   width: 100%;
-   z-index: 998;
+   position: relative;
+   top: 3rem;
 }
 
-.rightNavbar {
+.navbarButtonWrapper {
+   position: fixed;
+   z-index: 999;
+   right: 0%;
    display: flex;
+   padding: 2rem;
    gap: 1rem;
-   margin-left: auto;
+}
+
+.menuWrap {
+   display: flex;
+   position: relative;
+}
+
+.menu {
+   position: absolute;
+   display: flex;
+   background-color: white;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: opacity 0.5s ease, transform 0.5s ease;
+   opacity: 0;
+   right: 0;
+   margin: -1rem -1rem 0 0;
+}
+
+.menu.show {
+   opacity: 1;
+   pointer-events: all;
+   transform: translateX(0);
+}
+
+.menu.hide {
+   opacity: 0;
+   pointer-events: none;
+   transform: translateX(100%); /* Optional: add a slight slide effect */
+}
+
+.menuLeft,
+.menuRight {
+   width: 15rem;
+   height: 30rem;
+}
+
+.menuLeft {
+   background-color: #e1dbcc;
+}
+
+.menuRight {
+   background-color: var(--primary-color);
+}
+
+.menuRight > div {
+   margin-top: 6rem;
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+}
+
+.navbarSocialWrapper {
+   display: flex;
+   z-index: 998;
+   width: 50%;
+   position: fixed;
+   left: 0%;
+   padding: 2rem;
+   gap: 1rem;
 }
