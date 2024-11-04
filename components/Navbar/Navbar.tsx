@@ -3,7 +3,7 @@ import { StandardButton, CircleButton, MenuButton } from "../buttons/Buttons";
 import React, { useState } from "react";
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
-import { List } from "react-bootstrap-icons";
+import { Github, List } from "react-bootstrap-icons";
 export function Navbar() {
    function handleSocialClick(url: string) {
       window.location.href = url;
@@ -126,15 +126,25 @@ export function Navbar() {
             </div>
             <div className={style.navbarSocialWrapper}>
                <CircleButton
-                  imageUrl={imgLinkedin}
                   backgroundColor={"white"}
                   onClick={() => handleSocialClick("https://www.linkedin.com")}
-               />
+               >
+                  <img
+                     src={imgLinkedin}
+                     alt="Linkedin logo"
+                     style={{ width: "3rem", height: "3rem" }}
+                  />
+               </CircleButton>
                <CircleButton
-                  imageUrl={imgGithub}
                   backgroundColor={"white"}
                   onClick={() => handleSocialClick("https://www.github.com")}
-               />
+               >
+                  <img
+                     src={imgGithub}
+                     alt="Github logo"
+                     style={{ width: "2.3rem", height: "2.3rem" }}
+                  />
+               </CircleButton>
             </div>
          </nav>
       </>

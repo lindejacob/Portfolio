@@ -2,7 +2,7 @@ import styles from "./fabled.module.css";
 import fabledBackground from "../../assets/fabledBackground.png";
 const Fabled = () => {
    return (
-      <>
+      <main className={styles.fabled}>
          <section className={styles.titleSection}>
             <div className={styles.header}>
                <p>Project</p>
@@ -67,7 +67,7 @@ const Fabled = () => {
                <img src={fabledBackground} alt="Fabled" />
             </div>
          </section>
-      </>
+      </main>
    );
 };
 

@@ -18,7 +18,6 @@ body {
 }
 * {
    box-sizing: border-box;
-   scroll-behavior: smooth;
 }
 
 /* Page Transition Animation */
@@ -63,8 +62,6 @@ body.page-is-transitioning #page-content {
 * {
    font-family: "PP Telegraf", sans-serif;
    font-weight: 400;
-   color: #252423;
-   font-size: 10px;
 }
 
 :root {
