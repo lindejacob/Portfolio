@@ -50,12 +50,27 @@ section {
    border: 0.2rem solid rgb(155, 155, 155);
 }
 
+.dottedLineContainer {
+   position: relative;
+   top: 0rem;
+}
+
+.dottedLine {
+   z-index: 1;
+   position: absolute;
+}
+
+.contentSection {
+   background-color: #201f1f;
+   z-index: 3;
+}
+
 .contentGrid {
    width: 100%;
    display: grid;
    grid-template-rows: 50% 50%;
    grid-template-columns: 50% 50%;
-   align-items: center; /* Center vertically */
+   align-items: center; /* Center    vertically */
    gap: 5rem;
 }
 

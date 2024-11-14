@@ -1,5 +1,6 @@
 import styles from "./fabled.module.css";
 import fabledBackground from "../../assets/fabledBackground.png";
+import dottedLine from "../../assets/dottedline.svg";
 const Fabled = () => {
    return (
       <main className={styles.fabled}>
@@ -11,9 +12,16 @@ const Fabled = () => {
             <div className={styles.titleImageContainer}>
                <img src={fabledBackground} alt="Fabled" />
             </div>
+            <div className={styles.dottedLineContainer}>
+               <img
+                  className={styles.dottedLine}
+                  src={dottedLine}
+                  alt="Orange dotted line"
+               />
+            </div>
          </section>
 
-         <section className={styles.contentGrid}>
+         <section className={styles.contentSection}>
             <div className={styles.contentContainer}>
                <div className={styles.info}>
                   <p>Year:</p>
