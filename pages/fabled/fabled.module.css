@@ -24,15 +24,21 @@ section {
 
    height: 150vh;
 }
-.header > h1 {
-   font-weight: 400;
+
+.header {
+   margin-top: 5rem;
 }
 
 .header > p {
    width: auto;
    text-align: center;
    opacity: 80%;
-   font-size: 1.2rem;
+   font-size: 1.5rem;
+}
+
+.header > h1 {
+   margin-top: 0;
+   font-weight: 400;
 }
 
 .skillContainer {
@@ -51,18 +57,18 @@ section {
 }
 
 .dottedLineContainer {
-   position: relative;
+   z-index: 1;
    top: 0rem;
 }
 
 .dottedLine {
-   z-index: 1;
    position: absolute;
 }
 
 .contentSection {
    background-color: #201f1f;
    z-index: 3;
+   position: relative;
 }
 
 .contentGrid {
@@ -72,11 +78,13 @@ section {
    grid-template-columns: 50% 50%;
    align-items: center; /* Center    vertically */
    gap: 5rem;
+   height: 100vh;
+   justify-content: left;
 }
 
 .contentContainer {
-   grid-row: span 2; /* Span two rows */
-   grid-column: 1; /* Place in the first column */
+   grid-row: span 2;
+   grid-column: 1;
    padding-top: 3rem;
    padding-left: 6rem;
 }
@@ -100,6 +108,11 @@ section {
 .aboutContainer p:nth-child(2) {
    margin-top: 0;
    font-size: 1.2rem;
+}
+
+.imgContainer {
+   display: flex;
+   justify-content: center;
 }
 
 .imgContainer > img {
