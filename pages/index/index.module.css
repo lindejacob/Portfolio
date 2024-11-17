@@ -103,16 +103,18 @@
 }
 
 .arrow > img {
+   position: relative;
    width: 15rem;
    height: 15rem;
 }
 .arrow > p {
+   position: relative;
    font-family: "PermanentMarker";
    font-size: 1rem;
    transform: rotate(-40deg);
    color: var(--highlight-color);
-   margin-top: -2rem;
-   margin-left: -1rem;
+   left: 6rem;
+   bottom: 3rem;
 }
 .arrowWrap > h2 {
    color: var(--primary-color);
@@ -186,12 +188,18 @@
    }
 
    h4 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
    }
 
    p {
       font-size: 1.5rem;
       color: var(--secondary-color);
+   }
+
+   div {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
    }
 }
 
@@ -212,8 +220,8 @@
    width: 50%;
 }
 .skillsBtnContainer {
+   margin: 0;
    margin-top: 5rem;
-   margin-bottom: 0rem;
    display: flex;
    align-items: center;
    flex-direction: column;

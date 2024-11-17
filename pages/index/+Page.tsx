@@ -102,8 +102,11 @@ export default function Page() {
                      <h2>Jacob Mølholt Poulsen?</h2>
                   </div>
                   <div className={styles.studyContainer}>
-                     <h3>Studying</h3>
-                     <h4>Software engineering</h4>
+                     <div>
+                        <h3>Studying:</h3>
+                        <h4>Software engineering</h4>
+                     </div>
+
                      <p>3rd semester - Aalborg University</p>
                   </div>
                   <p className={styles.aboutText}>
