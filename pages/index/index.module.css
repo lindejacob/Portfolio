@@ -185,14 +185,16 @@
    h3 {
       font-size: 2rem;
       font-weight: 800;
+      margin-bottom: 0;
    }
 
    h4 {
       font-size: 1.8rem;
+      margin-bottom: 0;
    }
 
    p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--secondary-color);
    }
 
@@ -200,6 +202,7 @@
       display: flex;
       align-items: center;
       gap: 0.5em;
+      margin-bottom: 0;
    }
 }
 

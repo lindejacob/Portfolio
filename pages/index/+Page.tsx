@@ -110,11 +110,15 @@ export default function Page() {
                      <p>3rd semester - Aalborg University</p>
                   </div>
                   <p className={styles.aboutText}>
-                     Lorem ipsum dolor sit amet consectetur. Pharetra fringilla
-                     velit scelerisque rhoncus. Pulvinar vitae nisi ultrices
-                     amet cras integer proin commodo. Eget placerat adipiscing
-                     egestas risus nisi ultrices suscipit massa molestie. Odio
-                     velit non risus morbi pretium leo.
+                     I am currently studying Software Engineering at Aalborg
+                     University. Previously, I attended HTX at Aalborg Tekniske
+                     Gymnasium, where I specialized in Programming B and
+                     Communication & IT A. These courses provided me with a
+                     strong foundation in front-end development, particularly in
+                     applying design theories to create user-friendly and
+                     visually appealing solutions. Additionally, I have a
+                     growing interest in back-end development and enjoy
+                     exploring how systems work behind the scenes.
                   </p>
                </div>
                <div className={styles.profileImgContainer}>
