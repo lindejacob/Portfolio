@@ -24,3 +24,11 @@
    opacity: 70%;
    font-size: 1.2rem;
 }
+
+.skillCapsule {
+   width: fit-content;
+   border: 0.1rem solid grey;
+   padding: 0.2em 1em;
+   text-align: center;
+   border-radius: 1em;
+}

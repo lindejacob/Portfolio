@@ -1,3 +1,4 @@
+import { Children } from "react";
 import { SquareButton } from "../buttons/Buttons";
 import styles from "./skills.module.css";
 
@@ -24,4 +25,12 @@ export function SkillBox(props: SkillBoxProps) {
          </div>
       </div>
    );
+}
+
+type SkillCapsuleProps = {
+   children: string;
+};
+
+export function SkillCapsule(props: SkillCapsuleProps) {
+   return <p className={styles.skillCapsule}>{props.children}</p>;
 }
