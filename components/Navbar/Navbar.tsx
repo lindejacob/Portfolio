@@ -61,12 +61,12 @@ export function Navbar() {
                                  Fabled
                               </MenuButton>
                               <MenuButton
-                                 href="/fabled"
+                                 href="/fightordie"
                                  onClick={handleToggleNavbar}
                                  color="var(--secondary-color)"
                                  fontSize="1.5rem"
                               >
-                                 Fabled
+                                 Fight or Die
                               </MenuButton>
                               <MenuButton
                                  href="/fabled"

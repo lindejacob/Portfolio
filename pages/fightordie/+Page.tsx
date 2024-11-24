@@ -1,16 +1,17 @@
-import styles from "./fabled.module.css";
-import fabledBackground from "../../assets/fabledBackground.png";
-import FabledGame from "../../assets/FabledGame.jpg";
-import FabledVolk from "../../assets/FabledVolk.jpg";
+import styles from "./fightordie.module.css";
+import FightorDieIMG from "../../assets/FightorDieIMG.png";
+import FightorDieFight from "../../assets/FightorDieFight.jpg";
+import FightorDieSelect from "../../assets/FightorDieSelect.jpg";
+
 import dottedLine from "../../assets/dottedline.svg";
 import { SkillCapsule } from "../../components/skills/Skills";
-const Fabled = () => {
+const FightOrDie = () => {
    return (
       <main className={styles.fabled}>
          <section className={styles.titleSection}>
             <div className={styles.header}>
                <p>Project</p>
-               <h1>Fabled</h1>
+               <h1>Fight or Die</h1>
                <div className={styles.skillContainer}>
                   <SkillCapsule>Unity</SkillCapsule>
                   <SkillCapsule>Illustrator</SkillCapsule>
@@ -20,7 +21,7 @@ const Fabled = () => {
                </div>
             </div>
             <div className={styles.titleImageContainer}>
-               <img src={fabledBackground} alt="Fabled" />
+               <img src={FightorDieIMG} alt="Fabled" />
             </div>
             <div className={styles.dottedLineContainer}>
                <img
@@ -48,39 +49,41 @@ const Fabled = () => {
                   <div className={styles.aboutContainer}>
                      <p>About</p>
                      <p>
-                        In this project, I worked as a graphic designer,
-                        creating a significant portion of the game's visual
-                        assets. I developed skills in producing vector graphics
-                        on a larger scale and animating them to bring dynamic
-                        and engaging visuals to the game. The game itself is a
-                        cozy farming simulator where you take on the role of a
-                        farmer working to pay off a loan to a cunning wolf.
-                        Along the way, you’ll grow crops, expand the farm, and
-                        interact with quirky characters who bring life to the
-                        farm. The ultimate goal is to build a thriving community
-                        and become debt-free.
+                        In this project, I contributed as a developer and
+                        designer, combining hand-drawn elements created by
+                        others with enhanced images using filters and effects.
+                        This approach gave the game a unique visual style,
+                        blending an artistic hand-crafted look with polished
+                        digital enhancements. Fight or Die is a thrilling
+                        2-player fighter game set in the mythical temple of
+                        Resenkhar, where legends speak of a great treasure
+                        waiting for the strongest warrior. Players can choose
+                        from a roster of distinct characters, each equipped with
+                        unique abilities and the potential for devastating
+                        combos.
                      </p>
                      <p>
-                        This was an assignment in Digital Design and
-                        Development, where I not only honed my graphic design
-                        and animation skills but also gained valuable experience
-                        in teamwork. We collaborated as a team, utilizing
-                        elements of the Scrum framework to ensure effective
-                        communication and project management throughout the
-                        process.
+                        The game's dynamic visuals and fast-paced gameplay
+                        deliver an adrenaline-packed experience as players
+                        battle to claim the treasure. This project was a
+                        valuable learning experience, where I developed skills
+                        in image editing, asset integration, and collaborative
+                        design. Working closely with others, I also gained
+                        insights into balancing creative inputs to craft a
+                        cohesive and engaging game world.
                      </p>
                   </div>
                   <div className={styles.info}>
                      <p>Role:</p>
-                     <p>Front-end designer, Music Producer</p>
+                     <p>Front-end designer, and programmer</p>
                   </div>
                </div>
 
                <div className={styles.imgContainer}>
-                  <img src={FabledGame} alt="Fabled" />
+                  <img src={FightorDieFight} alt="Fabled" />
                </div>
                <div className={styles.imgContainer}>
-                  <img src={FabledVolk} alt="Fabled" />
+                  <img src={FightorDieSelect} alt="Fabled" />
                </div>
             </div>
          </section>
@@ -88,4 +91,4 @@ const Fabled = () => {
    );
 };
 
-export default Fabled;
+export default FightOrDie;
