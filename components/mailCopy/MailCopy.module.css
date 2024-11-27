@@ -1,0 +1,94 @@
+.container {
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.container:hover > .copyContainer {
+   transform: scale(1.02);
+   box-shadow: rgba(255, 99, 49, 0.5) 0 0 5.5rem 1rem;
+}
+
+.copyContainer {
+   position: relative;
+   display: flex;
+   cursor: pointer;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--primary-color);
+   border-radius: 2.5rem;
+   width: 100%; /* Ensure the container takes full width */
+   transition: all ease-in-out 0.3s;
+
+   * {
+      color: var(--secondary-color);
+   }
+}
+
+.copyContainer.clicked {
+   filter: blur(2px) brightness(0.8);
+}
+
+.mailContainer {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   flex-direction: row;
+   width: auto;
+   padding: 0rem 8rem;
+   margin: 0;
+}
+
+.mailContainer > p {
+   font-size: 4rem;
+   font-weight: 800;
+}
+
+.mailContainer > div {
+   position: absolute;
+   left: 0;
+}
+
+.clickToCopyContainer {
+   position: absolute;
+   bottom: 2.5rem;
+   left: 40rem;
+   transform: rotate(-3deg);
+}
+
+.clickToCopyContainer > p {
+   background-color: var(--highlight-color);
+   padding: 0.1em 1em;
+   border-radius: 2em;
+   margin: 0;
+   font-family: PermanentMarker;
+   font-size: 1.5rem;
+}
+
+.feedbackContainer {
+   position: absolute;
+   height: 10rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.feedback {
+   position: absolute;
+   transform: translateX(-50%);
+   top: 50%;
+   transition: all ease-out 0.1s;
+}
+
+.feedback.hide {
+   margin-top: 2rem;
+   opacity: 0;
+}
+
+.feedback.clicked {
+   transform: scale(2) translateX(-25%) translateY(-10%);
+}

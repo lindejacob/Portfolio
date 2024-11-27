@@ -1,12 +1,9 @@
 import style from "./Navbar.module.css";
 import { StandardButton, CircleButton, MenuButton } from "../buttons/Buttons";
 import React, { useState } from "react";
-
-import imgMenubars from "../../assets/menubars.svg";
 import imgGithub from "../../assets/githubLogo.png";
 import imgLinkedin from "../../assets/linkedinLogo.png";
-import { color } from "framer-motion";
-
+import { Github, List } from "react-bootstrap-icons";
 export function Navbar() {
    function handleSocialClick(url: string) {
       window.location.href = url;
@@ -29,52 +26,6 @@ export function Navbar() {
       );
    }
 
-   function Menu({ isMenuOpen }: { isMenuOpen: boolean }) {
-      return (
-         <div
-            className={`${style.menuPopUp} ${
-               isMenuOpen ? style.show : style.hide
-            }`}
-         >
-            <div
-               className={`${style.menu} ${
-                  isMenuOpen ? style.show : style.hide
-               }`}
-            >
-               <div className={style.menuLeft}></div>
-               <div className={style.menuRight}>
-                  <div>
-                     <MenuButton
-                        href="./"
-                        onClick={handleToggleNavbar}
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Home
-                     </MenuButton>
-                     <MenuButton
-                        onClick={handleToggleNavbar}
-                        href="./#selection-id"
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        Selector
-                     </MenuButton>
-                     <MenuButton
-                        onClick={handleToggleNavbar}
-                        href="./#about-id"
-                        color="var(--secondary-color)"
-                        fontSize="2rem"
-                     >
-                        About
-                     </MenuButton>
-                  </div>
-               </div>
-            </div>
-         </div>
-      );
-   }
-
    return (
       <>
          <Blurbackground isMenuOpen={isMenuOpen} />
@@ -88,28 +39,104 @@ export function Navbar() {
                   Contact
                </StandardButton>
                <div className={style.menuWrap}>
-                  <Menu isMenuOpen={isMenuOpen} />
+                  <div
+                     className={`${style.menuPopUp} ${
+                        isMenuOpen ? style.show : style.hide
+                     }`}
+                  >
+                     <div
+                        className={`${style.menu} ${
+                           isMenuOpen ? style.show : style.hide
+                        }`}
+                     >
+                        <div className={style.menuLeft}>
+                           <p>Projects</p>
+                           <div>
+                              <MenuButton
+                                 href="/fabled"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Fabled
+                              </MenuButton>
+                              <MenuButton
+                                 href="/fightordie"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Fight or Die
+                              </MenuButton>
+                              <MenuButton
+                                 href="/nova"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Project Nova
+                              </MenuButton>
+                           </div>
+                        </div>
+                        <div className={style.menuRight}>
+                           <div>
+                              <MenuButton
+                                 href="./"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="2rem"
+                              >
+                                 Home
+                              </MenuButton>
+                              <MenuButton
+                                 onClick={handleToggleNavbar}
+                                 href="./#selection-id"
+                                 color="var(--secondary-color)"
+                                 fontSize="2rem"
+                              >
+                                 Selector
+                              </MenuButton>
+                              <MenuButton
+                                 onClick={handleToggleNavbar}
+                                 href="./#about-id"
+                                 color="var(--secondary-color)"
+                                 fontSize="2rem"
+                              >
+                                 About
+                              </MenuButton>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                   <CircleButton
-                     imageUrl={imgMenubars}
-                     imageSize={"70%"}
                      backgroundColor={"var(--secondary-color)"}
                      onClick={handleToggleNavbar}
-                  />
+                  >
+                     <List size={"2.5em"} color={"var(--primary-color)"} />
+                  </CircleButton>
                </div>
             </div>
             <div className={style.navbarSocialWrapper}>
                <CircleButton
-                  imageUrl={imgLinkedin}
-                  imageSize={"100%"}
                   backgroundColor={"white"}
                   onClick={() => handleSocialClick("https://www.linkedin.com")}
-               />
+               >
+                  <img
+                     src={imgLinkedin}
+                     alt="Linkedin logo"
+                     style={{ width: "3rem", height: "3rem" }}
+                  />
+               </CircleButton>
                <CircleButton
-                  imageUrl={imgGithub}
-                  imageSize={"80%"}
                   backgroundColor={"white"}
                   onClick={() => handleSocialClick("https://www.github.com")}
-               />
+               >
+                  <img
+                     src={imgGithub}
+                     alt="Github logo"
+                     style={{ width: "2.3rem", height: "2.3rem" }}
+                  />
+               </CircleButton>
             </div>
          </nav>
       </>

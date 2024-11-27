@@ -9,10 +9,13 @@ import CardSlider from "../../components/cardSlider/CardSlider";
 import { Card } from "../../components/card/Card";
 import { SkillBox } from "../../components/skills/Skills";
 
-import arrowDown from "../../assets/arrowDown.svg";
 import fabledCard from "../../assets/fabledCard.svg";
+import FightorDieCard from "../../assets/FightorDieCard.png";
+import NovaCard from "../../assets/NovaCard.png";
 import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 import profilePicture from "../../assets/TempPic.png";
+import { MailCopy } from "../../components/mailCopy/MailCopy";
+import { ArrowDown } from "react-bootstrap-icons";
 
 export default function Page() {
    return (
@@ -25,11 +28,11 @@ export default function Page() {
             <div className={styles.scrollBtnContainer}>
                <p>Scroll</p>
                <CircleButton
-                  imageUrl={arrowDown}
-                  imageSize={"50%"}
                   backgroundColor={"var(--highlight-color"}
                   size={"3rem"}
-               />
+               >
+                  <ArrowDown size={"2rem"} />
+               </CircleButton>
             </div>
             <div className={styles.circleContainer}>
                <CircleZoom
@@ -60,30 +63,35 @@ export default function Page() {
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
+                  />
+                  <Card
+                     paperclipBool={false}
+                     image={FightorDieCard}
+                     altText={"FightOrDie"}
+                     url="/fightordie"
+                     size={1.5}
+                  />
+                  <Card
+                     paperclipBool={false}
+                     image={NovaCard}
+                     altText={"Nova"}
+                     url="/nova"
+                     size={1.5}
                   />
                   <Card
                      paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
+                     size={1.5}
                   />
                   <Card
                      paperclipBool={false}
-                     image={fabledCard}
-                     altText={"Fabled"}
-                     url="/fabled"
-                  />
-                  <Card
-                     paperclipBool={false}
-                     image={fabledCard}
-                     altText={"Fabled"}
-                     url="/fabled"
-                  />
-                  <Card
-                     paperclipBool={false}
-                     image={fabledCard}
-                     altText={"Fabled"}
-                     url="/fabled"
+                     image={FightorDieCard}
+                     altText={"FightOrDie"}
+                     url="/fightordie"
+                     size={1.5}
                   />
                </CardSlider>
             </div>
@@ -96,15 +104,23 @@ export default function Page() {
                      <h2>Jacob Mølholt Poulsen?</h2>
                   </div>
                   <div className={styles.studyContainer}>
-                     <h3>Studying</h3>
-                     <h4>Software engineering</h4>
+                     <div>
+                        <h3>Studying:</h3>
+                        <h4>Software engineering</h4>
+                     </div>
+
+                     <p>3rd semester - Aalborg University</p>
                   </div>
                   <p className={styles.aboutText}>
-                     Lorem ipsum dolor sit amet consectetur. Pharetra fringilla
-                     velit scelerisque rhoncus. Pulvinar vitae nisi ultrices
-                     amet cras integer proin commodo. Eget placerat adipiscing
-                     egestas risus nisi ultrices suscipit massa molestie. Odio
-                     velit non risus morbi pretium leo.
+                     I am currently studying Software Engineering at Aalborg
+                     University. Previously, I attended HTX at Aalborg Tekniske
+                     Gymnasium, where I specialized in Programming B and
+                     Communication & IT A. These courses provided me with a
+                     strong foundation in front-end development, particularly in
+                     applying design theories to create user-friendly and
+                     visually appealing solutions. Additionally, I have a
+                     growing interest in back-end development and enjoy
+                     exploring how systems work behind the scenes.
                   </p>
                </div>
                <div className={styles.profileImgContainer}>
@@ -114,11 +130,11 @@ export default function Page() {
             <div className={styles.skillsBtnContainer}>
                <p>Skills</p>
                <CircleButton
-                  imageUrl={arrowDown}
-                  imageSize={"50%"}
                   backgroundColor={"var(--highlight-color"}
                   size={"3rem"}
-               />
+               >
+                  <ArrowDown size={"2rem"} />
+               </CircleButton>
             </div>
 
             <div className={styles.skillContainer}>
@@ -209,6 +225,9 @@ export default function Page() {
                   {"Database"}
                </SkillBox>
             </div>
+         </section>
+         <section className={styles.contactSection}>
+            <MailCopy />
          </section>
       </main>
    );

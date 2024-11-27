@@ -13,8 +13,10 @@
 }
 
 .circleButton {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    height: 3rem;
-   padding: 0.5rem 1rem;
    cursor: pointer;
    border: none;
    border-radius: 50%;

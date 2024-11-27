@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Buttons.module.css";
-import ReactNode from "react";
-import { color } from "framer-motion";
 
 type StandardButtonProps = {
    children: React.ReactNode;
@@ -30,25 +28,26 @@ export function StandardButton(props: StandardButtonProps) {
 }
 
 type CircleButtonProps = {
-   imageUrl: string;
-   imageSize: string;
+   imageUrl?: string;
    backgroundColor: string;
    size?: string;
    onClick?: () => void;
+   children?: React.ReactElement;
 };
 
 export function CircleButton(props: CircleButtonProps) {
    return (
-      <button
+      <div
          style={{
             backgroundImage: `url(${props.imageUrl})`,
-            backgroundSize: props.imageSize,
             width: props.size,
             backgroundColor: props.backgroundColor,
          }}
          className={styles.circleButton}
          onClick={props.onClick}
-      />
+      >
+         {props.children}
+      </div>
    );
 }
 
