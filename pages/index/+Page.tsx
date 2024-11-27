@@ -11,6 +11,7 @@ import { SkillBox } from "../../components/skills/Skills";
 
 import fabledCard from "../../assets/fabledCard.svg";
 import FightorDieCard from "../../assets/FightorDieCard.png";
+import NovaCard from "../../assets/NovaCard.png";
 import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 import profilePicture from "../../assets/TempPic.png";
 import { MailCopy } from "../../components/mailCopy/MailCopy";
@@ -73,9 +74,9 @@ export default function Page() {
                   />
                   <Card
                      paperclipBool={false}
-                     image={fabledCard}
-                     altText={"Fabled"}
-                     url="/fabled"
+                     image={NovaCard}
+                     altText={"Nova"}
+                     url="/nova"
                      size={1.5}
                   />
                   <Card
@@ -87,9 +88,9 @@ export default function Page() {
                   />
                   <Card
                      paperclipBool={false}
-                     image={fabledCard}
-                     altText={"Fabled"}
-                     url="/fabled"
+                     image={FightorDieCard}
+                     altText={"FightOrDie"}
+                     url="/fightordie"
                      size={1.5}
                   />
                </CardSlider>

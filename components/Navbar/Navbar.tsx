@@ -69,20 +69,12 @@ export function Navbar() {
                                  Fight or Die
                               </MenuButton>
                               <MenuButton
-                                 href="/fabled"
+                                 href="/nova"
                                  onClick={handleToggleNavbar}
                                  color="var(--secondary-color)"
                                  fontSize="1.5rem"
                               >
-                                 Fabled
-                              </MenuButton>
-                              <MenuButton
-                                 href="/fabled"
-                                 onClick={handleToggleNavbar}
-                                 color="var(--secondary-color)"
-                                 fontSize="1.5rem"
-                              >
-                                 Fabled
+                                 Project Nova
                               </MenuButton>
                            </div>
                         </div>
