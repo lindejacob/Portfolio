@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import { CircleButton, SquareButton } from "../../components/buttons/Buttons";
+import { CircleButton } from "../../components/buttons/Buttons";
 import {
    CircleZoom,
    DarkenScreen,
