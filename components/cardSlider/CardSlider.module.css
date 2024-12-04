@@ -16,10 +16,10 @@
 
 .leftArrow {
    left: 25%;
-   transform: translate(-50%, -50%) rotateY(180deg); /* Combine transforms */
+   transform: translate(-50%, -50%);
 }
 
 .rightArrow {
    right: 25%;
-   transform: translate(50%, -50%); /* Combine transforms */
+   transform: translate(50%, -50%);
 }

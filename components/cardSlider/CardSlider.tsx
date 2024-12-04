@@ -3,6 +3,7 @@ import { motion, Variants } from "framer-motion";
 import styles from "./cardSlider.module.css";
 import { CircleButton } from "../buttons/Buttons";
 import arrow from "../../assets/arrow.svg";
+import { ArrowRight, ArrowLeft } from "react-bootstrap-icons";
 
 type CardSliderProps = {
    children: ReactNode;
@@ -139,18 +140,18 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
             <div className={styles.leftArrow}>
                <CircleButton
                   backgroundColor={"transparent"}
-                  imageSize={"100%"}
-                  imageUrl={arrow}
                   onClick={handleBack}
-               />
+               >
+                  <ArrowLeft size={75} color={"var(--primary-color)"} />
+               </CircleButton>
             </div>
             <div className={styles.rightArrow}>
                <CircleButton
                   backgroundColor={"transparent"}
-                  imageSize={"100%"}
-                  imageUrl={arrow}
                   onClick={handleNext}
-               />
+               >
+                  <ArrowRight size={75} color={"var(--primary-color)"} />
+               </CircleButton>
             </div>
          </div>
       </div>
