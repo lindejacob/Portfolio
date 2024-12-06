@@ -7,7 +7,7 @@ import dottedLine from "../../assets/dottedline.svg";
 import { SkillCapsule } from "../../components/skills/Skills";
 const FightOrDie = () => {
    return (
-      <main className={styles.fabled}>
+      <main className={styles.fightOrDie}>
          <section className={styles.titleSection}>
             <div className={styles.header}>
                <p>Project</p>

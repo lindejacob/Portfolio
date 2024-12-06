@@ -1,4 +1,4 @@
-import styles from "./fabled.module.css";
+import styles from "./nova.module.css";
 import NovaIMG from "../../assets/NovaIMG.png";
 import NovaBoard from "../../assets/NovaBoard.png";
 import NovaEdit from "../../assets/NovaEdit.png";
@@ -6,7 +6,7 @@ import dottedLine from "../../assets/dottedline.svg";
 import { SkillCapsule } from "../../components/skills/Skills";
 const Nova = () => {
    return (
-      <main className={styles.fabled}>
+      <main className={styles.nova}>
          <section className={styles.titleSection}>
             <div className={styles.header}>
                <p>Project</p>
