@@ -11,7 +11,7 @@ body {
    scroll-behavior: smooth;
 }
 
-section {
+.fabled > section {
    width: 100vw;
    min-height: 100vh;
    background-color: var(--secondary-color);
