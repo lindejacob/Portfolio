@@ -11,16 +11,15 @@
 .leftArrow,
 .rightArrow {
    position: absolute;
-   top: 50%;
-   /* Remove the transform property here */
+   top: 7rem;
 }
 
 .leftArrow {
-   left: 20%;
-   transform: translateY(450%) rotateY(180deg); /* Combine transforms */
+   left: 25%;
+   transform: translate(-50%, -50%);
 }
 
 .rightArrow {
-   right: 20%;
-   transform: translateY(450%); /* Apply the same translateY */
+   right: 25%;
+   transform: translate(50%, -50%);
 }
