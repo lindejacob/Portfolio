@@ -20,6 +20,7 @@ import { ArrowDown } from "react-bootstrap-icons";
 export default function Page() {
    return (
       <main>
+         <div className="mobileMessage">Mobile support on the way</div>
          <section className={styles.startSection}>
             <div className={styles.titleContainer}>
                <h1>Jacob Mølholt Poulsen</h1>

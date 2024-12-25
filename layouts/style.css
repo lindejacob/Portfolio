@@ -78,18 +78,31 @@ h1 {
 h2 {
    font-size: 3rem;
 }
-/* Small Devices, Tablets */
 /* Small Devices, Phones */
 @media only screen and (max-width: 767px) {
    * {
-      font-size: 10px;
+      display: none;
+   }
+
+   .mobileMessage {
+      display: block !important;
+      position: absolute;
+      font-size: 16px;
+      text-align: center;
+      color: #252423;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
 }
-
 /* Medium Devices, Tablets */
 @media only screen and (min-width: 768px) {
    * {
       font-size: 12px;
+   }
+
+   .mobileMessage {
+      display: none;
    }
 }
 
@@ -98,11 +111,19 @@ h2 {
    * {
       font-size: 12px;
    }
+
+   .mobileMessage {
+      display: none;
+   }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1300px) {
    * {
       font-size: 16px;
+   }
+
+   .mobileMessage {
+      display: none;
    }
 }
