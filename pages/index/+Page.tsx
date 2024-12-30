@@ -179,21 +179,12 @@ export default function Page() {
 
                <SkillBox
                   imgUrl={
-                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
                   }
-                  imgAlt={"TypeScript"}
+                  imgAlt={"Java-icon"}
                >
-                  {"TypeScript"}
+                  {"Java"}
                   {"Programming Language"}
-               </SkillBox>
-               <SkillBox
-                  imgUrl={
-                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                  }
-                  imgAlt={"React-icon"}
-               >
-                  {"React"}
-                  {"Website framework"}
                </SkillBox>
 
                <SkillBox
@@ -214,6 +205,24 @@ export default function Page() {
                >
                   {"CSS"}
                   {"Styling"}
+               </SkillBox>
+               <SkillBox
+                  imgUrl={
+                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  }
+                  imgAlt={"React-icon"}
+               >
+                  {"React"}
+                  {"Website framework"}
+               </SkillBox>
+               <SkillBox
+                  imgUrl={
+                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain.svg"
+                  }
+                  imgAlt={"HTML-icon"}
+               >
+                  {"Dot-net"}
+                  {"Framework"}
                </SkillBox>
 
                <SkillBox
