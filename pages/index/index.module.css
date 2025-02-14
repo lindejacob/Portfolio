@@ -160,7 +160,8 @@
    }
 
    .arrowWrap > h2 {
-      font-size: 3rem æ;
+      font-size: 3rem;
+      text-align: center;
    }
 }
 
