@@ -20,6 +20,7 @@ import { ArrowDown } from "react-bootstrap-icons";
 export default function Page() {
    return (
       <main>
+         <div className="mobileMessage">Mobile support on the way</div>
          <section className={styles.startSection}>
             <div className={styles.titleContainer}>
                <h1>Jacob Mølholt Poulsen</h1>
@@ -34,14 +35,17 @@ export default function Page() {
                   <ArrowDown size={"2rem"} />
                </CircleButton>
             </div>
-            <div className={styles.circleContainer}>
-               <CircleZoom
-                  effectStart={0}
-                  effectEnd={0.18}
-                  minScale={0.2}
-                  maxScale={1.9}
-               />
+            <div className="global-circle-container">
+               <div className={styles.circleContainer}>
+                  <CircleZoom
+                     effectStart={0}
+                     effectEnd={0.18}
+                     minScale={0.2}
+                     maxScale={1.9}
+                  />
+               </div>
             </div>
+
             <DarkenScreen effectStart={0.0} effectEnd={0.18} />
          </section>
 
@@ -178,21 +182,12 @@ export default function Page() {
 
                <SkillBox
                   imgUrl={
-                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
                   }
-                  imgAlt={"TypeScript"}
+                  imgAlt={"Java-icon"}
                >
-                  {"TypeScript"}
+                  {"Java"}
                   {"Programming Language"}
-               </SkillBox>
-               <SkillBox
-                  imgUrl={
-                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                  }
-                  imgAlt={"React-icon"}
-               >
-                  {"React"}
-                  {"Website framework"}
                </SkillBox>
 
                <SkillBox
@@ -214,6 +209,24 @@ export default function Page() {
                   {"CSS"}
                   {"Styling"}
                </SkillBox>
+               <SkillBox
+                  imgUrl={
+                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  }
+                  imgAlt={"React-icon"}
+               >
+                  {"React"}
+                  {"Website framework"}
+               </SkillBox>
+               <SkillBox
+                  imgUrl={
+                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain.svg"
+                  }
+                  imgAlt={"HTML-icon"}
+               >
+                  {"Dot-net"}
+                  {"Framework"}
+               </SkillBox>
 
                <SkillBox
                   imgUrl={
@@ -226,9 +239,9 @@ export default function Page() {
                </SkillBox>
             </div>
          </section>
-         <section className={styles.contactSection}>
+         {/* <section className={styles.contactSection}>
             <MailCopy />
-         </section>
+         </section> */}
       </main>
    );
 }

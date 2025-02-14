@@ -16,13 +16,6 @@
    top: 20%;
 }
 
-.titleContainer > h1 {
-   font-weight: bold;
-   font-style: normal;
-   font-size: 7rem;
-   width: 50rem;
-}
-
 .titleContainer {
    display: flex;
    position: relative;
@@ -36,8 +29,7 @@
 .titleContainer > h1 {
    font-weight: bold;
    font-style: normal;
-   font-size: 7rem;
-   width: 50rem;
+   width: 80vw;
    overflow-wrap: break-word;
    margin: 0rem;
 }
@@ -153,6 +145,25 @@
    }
 }
 
+@media (max-width: 768px) {
+   .contentContainer {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .contentContainer .infoContainer {
+      width: 100%;
+   }
+
+   .header > .arrowWrap > .arrow {
+      display: none;
+   }
+
+   .arrowWrap > h2 {
+      font-size: 3rem æ;
+   }
+}
+
 .contentContainer {
    display: flex;
    height: 100%;
@@ -217,6 +228,7 @@
    display: flex;
    justify-content: flex-end;
    align-items: center;
+   justify-content: center;
 }
 
 .profileImgContainer img {

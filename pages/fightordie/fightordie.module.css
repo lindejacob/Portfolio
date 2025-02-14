@@ -67,6 +67,7 @@ body {
 .contentSection {
    background-color: #201f1f;
    z-index: 3;
+   min-height: 125vh;
    position: relative;
 }
 
@@ -75,10 +76,29 @@ body {
    display: grid;
    grid-template-rows: 50% 50%;
    grid-template-columns: 50% 50%;
-   align-items: center; /* Center    vertically */
+   align-items: center;
+   grid-auto-flow: column;
    gap: 5rem;
-   height: 100vh;
+   min-height: 100vh;
    justify-content: left;
+}
+
+@media (max-width: 600px) {
+   .contentGrid {
+      display: block;
+      justify-content: center;
+   }
+
+   .contentGrid .contentContainer {
+      padding-left: 0rem;
+      width: 80vw;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+   }
+
+   .contentGrid .imgContainer {
+      margin-bottom: 3rem;
+   }
 }
 
 .contentContainer {
@@ -103,6 +123,7 @@ body {
    margin-top: 0;
    font-size: 1.2rem;
 }
+
 .aboutContainer p:nth-child(1) {
    opacity: 80%;
    margin-bottom: 0.3rem;
