@@ -35,14 +35,17 @@ export default function Page() {
                   <ArrowDown size={"2rem"} />
                </CircleButton>
             </div>
-            <div className={styles.circleContainer}>
-               <CircleZoom
-                  effectStart={0}
-                  effectEnd={0.18}
-                  minScale={0.2}
-                  maxScale={1.9}
-               />
+            <div className="global-circle-container">
+               <div className={styles.circleContainer}>
+                  <CircleZoom
+                     effectStart={0}
+                     effectEnd={0.18}
+                     minScale={0.2}
+                     maxScale={1.9}
+                  />
+               </div>
             </div>
+
             <DarkenScreen effectStart={0.0} effectEnd={0.18} />
          </section>
 
@@ -236,9 +239,9 @@ export default function Page() {
                </SkillBox>
             </div>
          </section>
-         <section className={styles.contactSection}>
+         {/* <section className={styles.contactSection}>
             <MailCopy />
-         </section>
+         </section> */}
       </main>
    );
 }
