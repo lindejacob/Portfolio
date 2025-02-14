@@ -81,18 +81,18 @@ h2 {
 /* Small Devices, Phones */
 @media only screen and (max-width: 767px) {
    * {
+      font-size: 11px;
+   }
+
+   .global-circle-container {
+      display: none;
+   }
+   .mobileMessage {
       display: none;
    }
 
-   .mobileMessage {
-      display: block !important;
-      position: absolute;
-      font-size: 16px;
-      text-align: center;
-      color: #252423;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+   h1 {
+      font-size: 6rem;
    }
 }
 /* Medium Devices, Tablets */
