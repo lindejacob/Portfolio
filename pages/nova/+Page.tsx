@@ -38,7 +38,7 @@ const Nova = () => {
                <div className={styles.contentContainer}>
                   <div className={styles.info}>
                      <p>Year:</p>
-                     <p>2023</p>
+                     <p>2024</p>
                   </div>
                   <div className={styles.info}>
                      <p>By:</p>

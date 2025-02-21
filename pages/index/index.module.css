@@ -146,6 +146,9 @@
 }
 
 @media (max-width: 768px) {
+   .contactSection {
+      display: none;
+   }
    .contentContainer {
       flex-direction: column;
       align-items: center;
