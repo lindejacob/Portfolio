@@ -12,6 +12,7 @@ import { SkillBox } from "../../components/skills/Skills";
 import fabledCard from "../../assets/fabledCard.svg";
 import FightorDieCard from "../../assets/FightorDieCard.png";
 import NovaCard from "../../assets/NovaCard.png";
+import KMDCard from "../../assets/kmdCard.png";
 import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 import profilePicture from "../../assets/TempPic.png";
 import { MailCopy } from "../../components/mailCopy/MailCopy";
@@ -63,35 +64,25 @@ export default function Page() {
             <div className={styles.projectSelector}>
                <CardSlider>
                   <Card
-                     paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
                      size={1.5}
                   />
                   <Card
-                     paperclipBool={false}
                      image={FightorDieCard}
                      altText={"FightOrDie"}
                      url="/fightordie"
                      size={1.5}
                   />
                   <Card
-                     paperclipBool={false}
                      image={NovaCard}
                      altText={"Nova"}
                      url="/nova"
                      size={1.5}
                   />
+                  <Card image={KMDCard} altText={"KMD"} url="/kmd" size={1.5} />
                   <Card
-                     paperclipBool={false}
-                     image={fabledCard}
-                     altText={"Fabled"}
-                     url="/fabled"
-                     size={1.5}
-                  />
-                  <Card
-                     paperclipBool={false}
                      image={FightorDieCard}
                      altText={"FightOrDie"}
                      url="/fightordie"
@@ -239,9 +230,9 @@ export default function Page() {
                </SkillBox>
             </div>
          </section>
-         {/* <section className={styles.contactSection}>
+         <section className={styles.contactSection}>
             <MailCopy />
-         </section> */}
+         </section>
       </main>
    );
 }

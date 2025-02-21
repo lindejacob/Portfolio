@@ -71,7 +71,7 @@
 /* Project Selector */
 .projectSelectorSection {
    width: 100%;
-   height: 120vh;
+   height: 100vh;
    background-color: var(--secondary-color);
 }
 
@@ -146,6 +146,9 @@
 }
 
 @media (max-width: 768px) {
+   .contactSection {
+      display: none;
+   }
    .contentContainer {
       flex-direction: column;
       align-items: center;

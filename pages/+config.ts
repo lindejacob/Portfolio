@@ -10,7 +10,7 @@ export default {
    Layout,
 
    // https://vike.dev/head-tags
-   title: "Portfolio",
+   title: "Jacob Poulsen",
    description: "Jacob Poulsen's portfolio",
 
    extends: vikeReact,

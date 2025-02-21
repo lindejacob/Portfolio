@@ -1,0 +1,149 @@
+.nova {
+   overflow: hidden;
+   * {
+      color: var(--primary-color);
+   }
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: var(--secondary-color);
+   scroll-behavior: smooth;
+}
+
+.nova > section {
+   width: 100vw;
+   min-height: 100vh;
+   background-color: var(--secondary-color);
+}
+
+.titleSection {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   height: 150vh;
+}
+
+.header {
+   margin-top: 5rem;
+}
+
+.header > p {
+   width: auto;
+   text-align: center;
+   opacity: 80%;
+   font-size: 1.5rem;
+}
+
+.header > h1 {
+   margin-top: 0;
+   font-weight: 400;
+}
+
+.skillContainer {
+   display: flex;
+   gap: 2rem;
+}
+
+.titleImageContainer {
+   border-radius: 2cap;
+}
+
+.titleImageContainer > img {
+   height: 30rem;
+   border: 0.2rem solid rgb(155, 155, 155);
+}
+
+.dottedLineContainer {
+   z-index: 1;
+   top: 0rem;
+}
+
+.dottedLine {
+   position: absolute;
+}
+
+.contentSection {
+   background-color: #201f1f;
+   z-index: 3;
+   min-height: 125vh;
+   position: relative;
+}
+
+.contentGrid {
+   width: 100%;
+   display: grid;
+   grid-template-rows: 50% 50%;
+   grid-template-columns: 50% 50%;
+   align-items: center;
+   grid-auto-flow: column;
+   gap: 5rem;
+   min-height: 100vh;
+   justify-content: left;
+}
+
+@media (max-width: 600px) {
+   .contentGrid {
+      display: block;
+      justify-content: center;
+   }
+
+   .contentGrid .contentContainer {
+      padding-left: 0rem;
+      width: 80vw;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+   }
+
+   .contentGrid .imgContainer {
+      margin-bottom: 3rem;
+   }
+}
+
+.contentContainer {
+   grid-row: span 2;
+   grid-column: 1;
+   padding-top: 3rem;
+   padding-left: 6rem;
+}
+
+.info p:nth-child(1) {
+   opacity: 80%;
+   font-size: 0.8rem;
+   margin-bottom: 0.3rem;
+}
+
+.info p:nth-child(2) {
+   margin-top: 0;
+   font-size: 1.1rem;
+}
+
+.aboutContainer p {
+   margin-top: 0;
+   font-size: 1.2rem;
+}
+
+.aboutContainer p:nth-child(1) {
+   opacity: 80%;
+   margin-bottom: 0.3rem;
+}
+
+.imgContainer {
+   display: flex;
+   justify-content: center;
+}
+
+.imgContainer > img {
+   height: 20rem;
+}
+
+.imgContainer:nth-child(3) {
+   grid-row: 1; /* Span two rows */
+   grid-column: 2; /* Place in the second column */
+}
+
+.imgContainer:nth-child(2) {
+   grid-row: 2; /* Span two rows */
+   grid-column: 2; /* Place in the second column */
+}

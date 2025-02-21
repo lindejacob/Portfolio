@@ -76,6 +76,14 @@ export function Navbar() {
                               >
                                  Project Nova
                               </MenuButton>
+                              <MenuButton
+                                 href="/kmd"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 KMD
+                              </MenuButton>
                            </div>
                         </div>
                         <div className={style.menuRight}>
