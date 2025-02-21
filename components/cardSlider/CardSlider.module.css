@@ -30,7 +30,9 @@
       margin-top: 50%;
    }
 
-   .leftArrow {
-      transform: translate(-175%, -50%);
+   @-moz-document url-prefix() {
+      .leftArrow {
+         transform: translate(-175%, -50%);
+      }
    }
 }

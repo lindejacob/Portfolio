@@ -63,35 +63,30 @@ export default function Page() {
             <div className={styles.projectSelector}>
                <CardSlider>
                   <Card
-                     paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
                      size={1.5}
                   />
                   <Card
-                     paperclipBool={false}
                      image={FightorDieCard}
                      altText={"FightOrDie"}
                      url="/fightordie"
                      size={1.5}
                   />
                   <Card
-                     paperclipBool={false}
                      image={NovaCard}
                      altText={"Nova"}
                      url="/nova"
                      size={1.5}
                   />
                   <Card
-                     paperclipBool={false}
                      image={fabledCard}
                      altText={"Fabled"}
                      url="/fabled"
                      size={1.5}
                   />
                   <Card
-                     paperclipBool={false}
                      image={FightorDieCard}
                      altText={"FightOrDie"}
                      url="/fightordie"

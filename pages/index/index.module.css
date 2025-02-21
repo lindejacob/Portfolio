@@ -71,7 +71,7 @@
 /* Project Selector */
 .projectSelectorSection {
    width: 100%;
-   height: 120vh;
+   height: 100vh;
    background-color: var(--secondary-color);
 }
 
