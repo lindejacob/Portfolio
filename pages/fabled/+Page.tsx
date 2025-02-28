@@ -3,7 +3,9 @@ import fabledBackground from "../../assets/fabledBackground.png";
 import FabledGame from "../../assets/FabledGame.jpg";
 import FabledVolk from "../../assets/FabledVolk.jpg";
 import dottedLine from "../../assets/dottedline.svg";
+import { Github } from "react-bootstrap-icons";
 import { SkillCapsule } from "../../components/skills/Skills";
+import { StandardButton } from "../../components/buttons/Buttons";
 const Fabled = () => {
    return (
       <main className={styles.fabled}>
@@ -74,6 +76,17 @@ const Fabled = () => {
                      <p>Role:</p>
                      <p>Front-end designer, Music Producer</p>
                   </div>
+                  <StandardButton
+                     backgroundColor="var(--secondary-color)"
+                     border="0.1rem solid var(--primary-color)"
+                     onClick={() =>
+                        (window.location.href =
+                           "https://github.com/GreyZar37/Fabled")
+                     }
+                  >
+                     <Github size={30}></Github>
+                     <p>Fabled repository</p>
+                  </StandardButton>
                </div>
 
                <div className={styles.imgContainer}>

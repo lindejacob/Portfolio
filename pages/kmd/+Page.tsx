@@ -4,6 +4,8 @@ import KMDView from "../../assets/kmdView.png";
 import KMDSurvey from "../../assets/kmdSurvey.png";
 import dottedLine from "../../assets/dottedline.svg";
 import { SkillCapsule } from "../../components/skills/Skills";
+import { StandardButton } from "../../components/buttons/Buttons";
+import { Github } from "react-bootstrap-icons";
 const Nova = () => {
    return (
       <main className={styles.nova}>
@@ -83,6 +85,17 @@ const Nova = () => {
                      <p>Role:</p>
                      <p>Full-stack developer</p>
                   </div>
+                  <StandardButton
+                     backgroundColor="var(--secondary-color)"
+                     border="0.1rem solid var(--primary-color)"
+                     onClick={() =>
+                        (window.location.href =
+                           "https://github.com/Solsystemet/KMD-Listing-Management-API")
+                     }
+                  >
+                     <Github size={30}></Github>
+                     <p>KMD Article-30 repository</p>
+                  </StandardButton>
                </div>
 
                <div className={styles.imgContainer}>

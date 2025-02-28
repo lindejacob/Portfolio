@@ -5,6 +5,8 @@ import FightorDieSelect from "../../assets/FightorDieSelect.jpg";
 
 import dottedLine from "../../assets/dottedline.svg";
 import { SkillCapsule } from "../../components/skills/Skills";
+import { StandardButton } from "../../components/buttons/Buttons";
+import { Github } from "react-bootstrap-icons";
 const FightOrDie = () => {
    return (
       <main className={styles.fightOrDie}>
@@ -77,6 +79,17 @@ const FightOrDie = () => {
                      <p>Role:</p>
                      <p>Front-end designer, and programmer</p>
                   </div>
+                  <StandardButton
+                     backgroundColor="var(--secondary-color)"
+                     border="0.1rem solid var(--primary-color)"
+                     onClick={() =>
+                        (window.location.href =
+                           "https://github.com/GreyZar37/Fight-or-Die")
+                     }
+                  >
+                     <Github size={30}></Github>
+                     <p>Fight or Die repository</p>
+                  </StandardButton>
                </div>
 
                <div className={styles.imgContainer}>

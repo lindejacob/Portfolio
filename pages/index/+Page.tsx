@@ -13,6 +13,7 @@ import fabledCard from "../../assets/fabledCard.svg";
 import FightorDieCard from "../../assets/FightorDieCard.png";
 import NovaCard from "../../assets/NovaCard.png";
 import KMDCard from "../../assets/kmdCard.png";
+import PortfolioCard from "../../assets/portfolioCard.png";
 import curlyHighlightArrow from "../../assets/curlyHighlightArrow.svg";
 import profilePicture from "../../assets/TempPic.png";
 import { MailCopy } from "../../components/mailCopy/MailCopy";
@@ -83,9 +84,9 @@ export default function Page() {
                   />
                   <Card image={KMDCard} altText={"KMD"} url="/kmd" size={1.5} />
                   <Card
-                     image={FightorDieCard}
-                     altText={"FightOrDie"}
-                     url="/fightordie"
+                     image={PortfolioCard}
+                     altText={"Portfolio Website"}
+                     url="/portfolio-website"
                      size={1.5}
                   />
                </CardSlider>
