@@ -84,6 +84,14 @@ export function Navbar() {
                               >
                                  KMD
                               </MenuButton>
+                              <MenuButton
+                                 href="/portfolio-website"
+                                 onClick={handleToggleNavbar}
+                                 color="var(--secondary-color)"
+                                 fontSize="1.5rem"
+                              >
+                                 Portfolio Website
+                              </MenuButton>
                            </div>
                         </div>
                         <div className={style.menuRight}>
