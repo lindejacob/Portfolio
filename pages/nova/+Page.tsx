@@ -4,6 +4,8 @@ import NovaBoard from "../../assets/NovaBoard.png";
 import NovaEdit from "../../assets/NovaEdit.png";
 import dottedLine from "../../assets/dottedline.svg";
 import { SkillCapsule } from "../../components/skills/Skills";
+import { StandardButton } from "../../components/buttons/Buttons";
+import { Github } from "react-bootstrap-icons";
 const Nova = () => {
    return (
       <main className={styles.nova}>
@@ -77,6 +79,17 @@ const Nova = () => {
                      <p>Role:</p>
                      <p>Front-end designer</p>
                   </div>
+                  <StandardButton
+                     backgroundColor="var(--secondary-color)"
+                     border="0.1rem solid var(--primary-color)"
+                     onClick={() =>
+                        (window.location.href =
+                           "https://github.com/Solsystemet/Project-Nova")
+                     }
+                  >
+                     <Github size={30}></Github>
+                     <p>Project Nova repository</p>
+                  </StandardButton>
                </div>
 
                <div className={styles.imgContainer}>

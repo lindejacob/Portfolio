@@ -3,9 +3,9 @@ import styles from "./Buttons.module.css";
 
 type StandardButtonProps = {
    children: React.ReactNode;
-   color: string;
+   color?: string;
    backgroundColor?: string;
-   fontSize: string;
+   fontSize?: string;
    border?: string;
    onClick?: () => void;
 };
