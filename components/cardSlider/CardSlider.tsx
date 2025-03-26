@@ -140,7 +140,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
             <div className={styles.leftArrow}>
                <CircleButton
                   backgroundColor={"transparent"}
-                  onClick={handleBack}
+                  onClick={handleNext}
                >
                   <ArrowLeft size={75} color={"var(--primary-color)"} />
                </CircleButton>
@@ -148,7 +148,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children }) => {
             <div className={styles.rightArrow}>
                <CircleButton
                   backgroundColor={"transparent"}
-                  onClick={handleNext}
+                  onClick={handleBack}
                >
                   <ArrowRight size={75} color={"var(--primary-color)"} />
                </CircleButton>
