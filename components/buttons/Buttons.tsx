@@ -69,7 +69,7 @@ export function SquareButton(props: SquareButtonProps) {
 }
 
 type MenuButtonProps = {
-   children: React.ReactNode;
+   children?: React.ReactNode;
    fontSize: string;
    color: string;
    href?: string;
