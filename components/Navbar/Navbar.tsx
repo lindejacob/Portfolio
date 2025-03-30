@@ -135,7 +135,11 @@ export function Navbar() {
             <div className={style.navbarSocialWrapper}>
                <CircleButton
                   backgroundColor={"white"}
-                  onClick={() => handleSocialClick("https://www.linkedin.com")}
+                  onClick={() =>
+                     handleSocialClick(
+                        "https://www.linkedin.com/in/jacob-m%C3%B8lholt-poulsen-24572b290/"
+                     )
+                  }
                >
                   <img
                      src={imgLinkedin}
@@ -145,7 +149,9 @@ export function Navbar() {
                </CircleButton>
                <CircleButton
                   backgroundColor={"white"}
-                  onClick={() => handleSocialClick("https://www.github.com")}
+                  onClick={() =>
+                     handleSocialClick("https://github.com/lindejacob")
+                  }
                >
                   <img
                      src={imgGithub}
