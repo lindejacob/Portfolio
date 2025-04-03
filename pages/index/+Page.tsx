@@ -105,7 +105,7 @@ export default function Page() {
                         <h4>Software engineering</h4>
                      </div>
 
-                     <p>3rd semester - Aalborg University</p>
+                     <p>4rd semester - Aalborg University</p>
                   </div>
                   <p className={styles.aboutText}>
                      I am currently studying Software Engineering at Aalborg
